@@ -10,6 +10,27 @@
             layers = <0>;
         };
         */
+        combo_z {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp Z>;
+            layers = <BASE>;
+        };
+
+        combo_lcaps_word {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&caps_word>;
+            layers = <BASE>;
+        };
+
+        combo_rcaps_word {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&caps_word>;
+            layers = <BASE>;
+        };
+
         // NON-THUMB SYMBOLS 
         combo_backslash {
             timeout-ms = <30>;
@@ -150,22 +171,6 @@
             timeout-ms = <50>;
             key-positions = <36 17>;
             bindings = <&skq RALT>;
-            slow-release;
-        };
-
-        combo_lhyper {
-            timeout-ms = <50>;
-            key-positions = <10 13>;
-            bindings = <&kp LC(LA(LS(LGUI)))>;
-            layers = <BASE>;
-            slow-release;
-        };
-
-        combo_rhyper {
-            timeout-ms = <50>;
-            key-positions = <16 19>;
-            bindings = <&kp RC(RA(RS(RGUI)))>;
-            layers = <BASE>;
             slow-release;
         };
 

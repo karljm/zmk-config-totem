@@ -1,3 +1,6 @@
+#define L_HYPER LC(LA(LS(LGUI)))
+#define R_HYPER RC(RA(RS(RGUI)))
+
 / {
     behaviors {
         skq: sticky_key_quick_release {
