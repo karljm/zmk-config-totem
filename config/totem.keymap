@@ -48,9 +48,9 @@
 
         num {
             bindings = <
-           &kp KP_N7  &kp KP_N6  &kp KP_N5  &kp KP_N4  &none       &none       &kp KP_N4  &kp KP_N5  &kp KP_N6 &kp KP_N7
+           &none      &kp KP_DOT &kp KP_N9  &kp KP_N8  &none       &none       &kp KP_N8  &kp KP_N9  &kp KP_DOT &none
            &kp KP_N3  &kp KP_N2  &kp KP_N1  &kp KP_N0  &none       &none       &kp KP_N0  &kp KP_N1  &kp KP_N2 &kp KP_N3
-&tog_on FUN &none     &kp KP_DOT &kp KP_N9  &kp KP_N8  &none       &none       &kp KP_N8  &kp KP_N9  &kp KP_DOT &none &tog_on FUN
+&tog_on FUN &kp KP_N7 &kp KP_N6  &kp KP_N5  &kp KP_N4  &none       &none       &kp KP_N4  &kp KP_N5  &kp KP_N6 &kp KP_N7 &tog_on FUN
                          &trans   &trans  &trans    &none   &kp RIGHT_SHIFT  &none
             >;
         };
@@ -58,10 +58,10 @@
         fun {
             label = "FUN";
             bindings = <
-           &kp F7     &kp F6  &kp F5  &kp F4  &none    &none    &kp F4   &kp F5  &kp F6  &kp F7
+           &kp F11    &kp F10 &kp F9  &kp F8  &none    &none    &kp F8   &kp F9  &kp F10 &kp F11
            &kp F3     &kp F2  &kp F1  &kp F12 &none    &none    &kp F12  &kp F1  &kp F2  &kp F3
-&tog_off FUN &kp F11  &kp F10 &kp F9  &kp F8  &none    &none    &kp F8   &kp F9  &kp F10 &kp F11 &tog_off FUN
-                         &trans  &trans  &trans    &none   &kp RIGHT_SHIFT  &none
+&tog_off FUN &kp F7   &kp F6  &kp F5  &kp F4  &none    &none    &kp F4   &kp F5  &kp F6  &kp F7  &tog_off FUN
+                         &trans  &trans  &trans    &none   &none  &none
             >;
         };
 
