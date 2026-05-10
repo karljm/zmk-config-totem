@@ -16,9 +16,10 @@
 
 #define BASE   0
 #define NAV    1
-#define SYM    2
-#define DEVICE 3
-#define SWITCH 4
+#define NUM    2
+#define FUN    3
+#define DEVICE 4
+#define SWITCH 5
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -32,25 +33,35 @@
            &kp B  &kp L  &kp D     &kp W          &kp Z          &kp QUESTION  &kp F         &kp O          &kp U    &kp J
            &kp N  &kp R  &kp T     &kp S          &kp G          &kp Y         &kp H         &kp A          &kp E    &kp I
 &none      &kp Q  &kp X  &kp M     &kp C          &kp V          &kp K         &kp P         &kp DOT        &kp COMMA &kp FSLH &kp SEMI
-                         &kp LGUI  &lt SYM SPACE  &mo NAV        &kp SPACE     &mo SYM       &kp RIGHT_ALT
+                         &kp LGUI  &lt NAV SPACE  &num_hold_cleanup &num_hold_cleanup &mo NAV       &kp RIGHT_ALT
             >;
         };
 
         nav {
             bindings = <
-                    &none    &none       &kp ENTER   &kp TAB         &none      &none       &none        &none       &none     &none
-                    &kp ESC  &none       &kp DEL     &kp BACKSPACE   &none      &none       &kp RSHFT    &kp RALT    &kp RGUI  &kp RCTRL
-            &none   &none    &kp LEFT    &kp DOWN    &kp RIGHT       &kp UP     &none       &none        &none       &none     &none     &none
+                    &kp ESC  &kp TAB     &kp ENTER   &kp BACKSPACE   &kp DEL   &kp DEL     &kp BACKSPACE &kp ENTER  &kp TAB  &kp ESC
+                    &kp LCTRL &kp LGUI   &kp LALT    &kp LSHFT       &none     &none       &kp RSHFT     &kp RALT    &kp RGUI &kp RCTRL
+            &none   &none    &kp LEFT    &kp DOWN    &kp RIGHT       &kp UP     &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT &none     &none
                                                      &trans          &trans     &trans      &trans       &trans      &trans
             >;
         };
 
-        sym_func {
+        num {
             bindings = <
-           &kp ESC        &kp LEFT_BRACE        &kp RIGHT_BRACE        &none             &none             &kp F1   &kp F2           &kp F3   &kp F4   &kp F5
-           &kp TAB        &kp LBKT              &kp RBKT               &kp ENTER         &kp BSLH          &kp F6   &kp F7           &kp F8   &kp F9   &kp F10
-&kp GRAVE  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp UNDERSCORE    &kp F11  &kp F12          &kp F13  &kp F14  &kp F15  &kp F16
-                                                &trans                 &trans            &trans            &none    &kp RIGHT_SHIFT  &none
+           &kp KP_N7  &kp KP_N6  &kp KP_N5  &kp KP_N4  &none       &none       &kp KP_N4  &kp KP_N5  &kp KP_N6 &kp KP_N7
+           &kp KP_N3  &kp KP_N2  &kp KP_N1  &kp KP_N0  &none       &none       &kp KP_N0  &kp KP_N1  &kp KP_N2 &kp KP_N3
+&tog_on FUN &none     &kp KP_DOT &kp KP_N9  &kp KP_N8  &none       &none       &kp KP_N8  &kp KP_N9  &kp KP_DOT &none &tog_on FUN
+                         &trans   &trans  &trans    &none   &kp RIGHT_SHIFT  &none
+            >;
+        };
+
+        fun {
+            label = "FUN";
+            bindings = <
+           &kp F7     &kp F6  &kp F5  &kp F4  &none    &none    &kp F4   &kp F5  &kp F6  &kp F7
+           &kp F3     &kp F2  &kp F1  &kp F12 &none    &none    &kp F12  &kp F1  &kp F2  &kp F3
+&tog_off FUN &kp F11  &kp F10 &kp F9  &kp F8  &none    &none    &kp F8   &kp F9  &kp F10 &kp F11 &tog_off FUN
+                         &trans  &trans  &trans    &none   &kp RIGHT_SHIFT  &none
             >;
         };
 
@@ -73,8 +84,6 @@
             >;
         };
 
-        extra2 { status = "reserved"; };
-
         extra3 { status = "reserved"; };
     };
 
@@ -82,7 +91,7 @@
         compatible = "zmk,conditional-layers";
 
         device {
-            if-layers = <NAV SYM>;
+            if-layers = <NAV NUM>;
             then-layer = <DEVICE>;
         };
     };

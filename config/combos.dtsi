@@ -153,6 +153,22 @@
             slow-release;
         };
 
+        combo_lhyper {
+            timeout-ms = <50>;
+            key-positions = <10 13>;
+            bindings = <&kp LC(LA(LS(LGUI)))>;
+            layers = <BASE>;
+            slow-release;
+        };
+
+        combo_rhyper {
+            timeout-ms = <50>;
+            key-positions = <16 19>;
+            bindings = <&kp RC(RA(RS(RGUI)))>;
+            layers = <BASE>;
+            slow-release;
+        };
+
         // SWITCHING
         combo_gui_next {
             timeout-ms = <50>;
