@@ -93,6 +93,7 @@
         extra3 { status = "reserved"; };
     };
 
+    /*
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -101,4 +102,5 @@
             then-layer = <DEVICE>;
         };
     };
+    */
 };
