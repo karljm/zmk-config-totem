@@ -203,6 +203,13 @@
         };
 
         // SWITCHING
+        combo_gui_prev {
+            timeout-ms = <50>;
+            key-positions = <11 12 33>;
+            bindings = <&sw_gui_next>;
+            layers = <0>;
+            slow-release;
+        };
         combo_gui_next {
             timeout-ms = <50>;
             key-positions = <11 13 33>;
@@ -211,6 +218,13 @@
             slow-release;
         };
 
+        combo_ctl_prev {
+            timeout-ms = <50>;
+            key-positions = <10 12 33>;
+            bindings = <&sw_ctl_next>;
+            layers = <0>;
+            slow-release;
+        };
         combo_ctl_next {
             timeout-ms = <50>;
             key-positions = <10 13 33>;
@@ -219,6 +233,13 @@
             slow-release;
         };
 
+        combo_alt_prev {
+            timeout-ms = <50>;
+            key-positions = <22 23 33>;
+            bindings = <&sw_alt_next>;
+            layers = <0>;
+            slow-release;
+        };
         combo_alt_next {
             timeout-ms = <50>;
             key-positions = <22 24 33>;
