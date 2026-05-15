@@ -186,6 +186,22 @@
             slow-release;
         };
 
+        combo_lfun {
+            timeout-ms = <50>;
+            key-positions = <34 12>;
+            bindings = <&mo FUN>;
+            layers = <BASE>;
+            slow-release;
+        };
+
+        combo_rfun {
+            timeout-ms = <50>;
+            key-positions = <35 17>;
+            bindings = <&mo FUN>;
+            layers = <BASE>;
+            slow-release;
+        };
+
         // SWITCHING
         combo_gui_next {
             timeout-ms = <50>;
