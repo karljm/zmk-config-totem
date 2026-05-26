@@ -206,7 +206,7 @@
         combo_gui_prev {
             timeout-ms = <50>;
             key-positions = <11 12 33>;
-            bindings = <&sw_gui_next>;
+            bindings = <&sw_gui_prev>;
             layers = <0>;
             slow-release;
         };
@@ -221,7 +221,7 @@
         combo_ctl_prev {
             timeout-ms = <50>;
             key-positions = <10 12 33>;
-            bindings = <&sw_ctl_next>;
+            bindings = <&sw_ctl_prev>;
             layers = <0>;
             slow-release;
         };
@@ -236,7 +236,7 @@
         combo_alt_prev {
             timeout-ms = <50>;
             key-positions = <22 23 33>;
-            bindings = <&sw_alt_next>;
+            bindings = <&sw_alt_prev>;
             layers = <0>;
             slow-release;
         };
