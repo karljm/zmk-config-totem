@@ -1,5 +1,4 @@
-#define L_HYPER LC(LA(LS(LGUI)))
-#define R_HYPER RC(RA(RS(RGUI)))
+#define HYPER LC(LA(LS(LGUI)))
 
 / {
     behaviors {
