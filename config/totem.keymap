@@ -24,6 +24,7 @@
 #define FUN    3
 #define DEVICE 4
 #define SWITCH 5
+#define SYM_PAIR 6
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -38,10 +39,10 @@
 
         base {
             bindings = <
-              &kp B  &kp L  &kp D      &kp W          &kp EXCL           /**/  &kp QUESTION       &kp F          &kp O      &kp U      &kp J
-              &kp N  &kp R  &kp T      &kp S          &kp G              /**/  &kp Y              &kp H          &kp A      &kp E      &kp I
-&mo DEVICE    &kp Q  &kp X  &kp M      &kp C          &kp V              /**/  &kp K              &kp P          &kp DOT    &kp COMMA  &kp FSLH  &lt DEVICE SEMI
-                            &kp HYPER  &lt NAV SPACE  &num_hold_cleanup  /**/  &num_hold_cleanup  &lt NAV SPACE  &kp HYPER
+              &kp B  &kp L  &kp D      &kp W          &kp EXCL      /**/  &kp QUESTION  &kp F          &kp O      &kp U      &kp J
+              &kp N  &kp R  &kp T      &kp S          &kp G         /**/  &kp Y         &kp H          &kp A      &kp E      &kp I
+&mo DEVICE    &kp Q  &kp X  &kp M      &kp C          &kp V         /**/  &kp K         &kp P          &kp DOT    &kp COMMA  &kp FSLH  &lt DEVICE SEMI
+                            &kp HYPER  &lt NAV SPACE  &mo SYM_PAIR  /**/  &mo SYM_PAIR  &lt NAV SPACE  &kp HYPER
             >;
         };
 
@@ -92,7 +93,15 @@
             >;
         };
 
-        extra3 { status = "reserved"; };
+        sym_pair {
+            label = "SYM_PAIR";
+            bindings = <
+              &none     &none     &none     &none     &none   /**/  &none   &none     &none     &none     &none
+              &kp RBRC  &kp RPAR  &kp LBRC  &kp LPAR  &none   /**/  &none   &kp LPAR  &kp LBRC  &kp RPAR  &kp RBRC
+&none         &none     &none     &kp RBKT  &kp LBKT  &none   /**/  &none   &kp LBKT  &kp RBKT  &none     &none     &none
+                                  &trans    &trans    &trans  /**/  &trans  &trans    &trans
+            >;
+        };
     };
 
     /*
