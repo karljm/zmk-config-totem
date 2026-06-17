@@ -3,7 +3,7 @@
 //                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
 //                                                        █   █  █  █   █  █  █   █  █  █   █
 //                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
+//                                                               █      ▄▄▄█▄▄▄    █   █
 //                                                               ▀      █  █  █     █▄█
 //                                                             ▀▀▀▀▀    █  █  █      ▀
 //                                                                      ▀  ▀  ▀
@@ -56,20 +56,20 @@
 
         num {
             bindings = <
-                         &none      &none      &none      &kp KP_DOT &none       &none        &kp KP_DOT &none      &none      &none
-                         &kp KP_N4  &kp KP_N3  &kp KP_N2  &kp KP_N1  &kp KP_N0   &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4
-            &tog_on FUN  &kp KP_N9  &kp KP_N8  &kp KP_N7  &kp KP_N6  &kp KP_N5   &kp KP_N5    &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_N9  &tog_on FUN
-                                               &trans     &kp KP_DOT &trans      &none        &kp KP_DOT &none
+                         &none      &kp KP_N9  &kp KP_N8  &kp KP_N7  &none       &none        &kp KP_N7  &kp KP_N8  &kp KP_N9  &none
+                         &none      &kp KP_N6  &kp KP_N5  &kp KP_N4  &none       &none        &kp KP_N4  &kp KP_N5  &kp KP_N6  &none
+            &tog_on FUN  &kp KP_N0  &kp KP_N3  &kp KP_N2  &kp KP_N1  &none       &none        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0  &tog_on FUN
+                                               &trans     &kp KP_DOT &kp KP_N0   &kp KP_N0    &kp KP_DOT &none
             >;
         };
 
         fun {
             label = "FUN";
             bindings = <
-                          &none    &none   &kp F12  &kp F11  &none     &none     &kp F11  &kp F12  &none   &none
-                          &kp F4   &kp F3  &kp F2   &kp F1   &kp F10   &kp F10   &kp F1   &kp F2   &kp F3  &kp F4
-            &tog_off FUN  &kp F9   &kp F8  &kp F7   &kp F6   &kp F5    &kp F5    &kp F6   &kp F7   &kp F8  &kp F9  &tog_off FUN
-                                            &trans   &trans   &trans     &none     &none    &none
+                          &kp F12  &kp F9  &kp F8  &kp F7  &none      &none     &kp F7   &kp F8  &kp F9  &kp F12
+                          &kp F11  &kp F6  &kp F5  &kp F4  &none      &none     &kp F4   &kp F5  &kp F6  &kp F11
+            &tog_off FUN  &kp F10  &kp F3  &kp F2  &kp F1  &none      &none     &kp F1   &kp F2  &kp F3  &kp F10 &tog_off FUN
+                                           &trans   &trans  &trans      &none     &none    &none
             >;
         };
 
