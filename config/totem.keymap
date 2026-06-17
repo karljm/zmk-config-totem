@@ -38,57 +38,57 @@
 
         base {
             bindings = <
-           &kp B  &kp L  &kp D     &kp W          &kp EXCL       &kp QUESTION  &kp F         &kp O          &kp U    &kp J
-           &kp N  &kp R  &kp T     &kp S          &kp G          &kp Y         &kp H         &kp A          &kp E    &kp I
-&mo DEVICE &kp Q  &kp X  &kp M     &kp C          &kp V          &kp K         &kp P         &kp DOT        &kp COMMA &kp FSLH &lt DEVICE SEMI
-                         &kp HYPER &lt NAV SPACE  &num_hold_cleanup &num_hold_cleanup &lt NAV SPACE       &kp HYPER
+              &kp B  &kp L  &kp D      &kp W          &kp EXCL           /**/  &kp QUESTION       &kp F          &kp O      &kp U      &kp J
+              &kp N  &kp R  &kp T      &kp S          &kp G              /**/  &kp Y              &kp H          &kp A      &kp E      &kp I
+&mo DEVICE    &kp Q  &kp X  &kp M      &kp C          &kp V              /**/  &kp K              &kp P          &kp DOT    &kp COMMA  &kp FSLH  &lt DEVICE SEMI
+                            &kp HYPER  &lt NAV SPACE  &num_hold_cleanup  /**/  &num_hold_cleanup  &lt NAV SPACE  &kp HYPER
             >;
         };
 
         nav {
             bindings = <
-                    &kp ESC  &kp TAB     &kp ENTER   &kp BACKSPACE   &kp DEL   &kp DEL     &kp BACKSPACE &kp ENTER  &kp TAB  &kp ESC
-                    &kp LCTRL &kp LGUI   &kp LALT    &kp LSHFT       &msc SCRL_DOWN &msc SCRL_DOWN &kp RSHFT     &kp RALT    &kp RGUI &kp RCTRL
-            &none   &msc SCRL_UP &kp LEFT &kp UP    &kp DOWN      &kp RIGHT     &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT &msc SCRL_UP &none
-                                                     &trans          &trans     &trans      &trans       &trans      &trans
+              &kp ESC       &kp TAB   &kp ENTER  &kp BACKSPACE  &kp DEL         /**/  &kp DEL         &kp BACKSPACE  &kp ENTER  &kp TAB    &kp ESC
+              &kp LCTRL     &kp LGUI  &kp LALT   &kp LSHFT      &msc SCRL_DOWN  /**/  &msc SCRL_DOWN  &kp RSHFT      &kp RALT   &kp RGUI   &kp RCTRL
+&none         &msc SCRL_UP  &kp LEFT  &kp UP     &kp DOWN       &kp RIGHT       /**/  &kp LEFT        &kp DOWN       &kp UP     &kp RIGHT  &msc SCRL_UP  &none
+                                      &trans     &trans         &trans          /**/  &trans          &trans         &trans
             >;
         };
 
         num {
             bindings = <
-                         &none      &kp KP_N9  &kp KP_N8  &kp KP_N7  &none       &none        &kp KP_N7  &kp KP_N8  &kp KP_N9  &none
-                         &none      &kp KP_N6  &kp KP_N5  &kp KP_N4  &none       &none        &kp KP_N4  &kp KP_N5  &kp KP_N6  &none
-            &tog_on FUN  &kp KP_N0  &kp KP_N3  &kp KP_N2  &kp KP_N1  &none       &none        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0  &tog_on FUN
-                                               &trans     &kp KP_DOT &kp KP_N0   &kp KP_N0    &kp KP_DOT &none
+              &none      &kp KP_N9  &kp KP_N8  &kp KP_N7   &none      /**/  &none      &kp KP_N7   &kp KP_N8  &kp KP_N9  &none
+              &none      &kp KP_N6  &kp KP_N5  &kp KP_N4   &none      /**/  &none      &kp KP_N4   &kp KP_N5  &kp KP_N6  &none
+&tog_on FUN   &kp KP_N0  &kp KP_N3  &kp KP_N2  &kp KP_N1   &none      /**/  &none      &kp KP_N1   &kp KP_N2  &kp KP_N3  &kp KP_N0  &tog_on FUN
+                                    &trans     &kp KP_DOT  &kp KP_N0  /**/  &kp KP_N0  &kp KP_DOT  &none
             >;
         };
 
         fun {
             label = "FUN";
             bindings = <
-                          &kp F12  &kp F9  &kp F8  &kp F7  &none      &none     &kp F7   &kp F8  &kp F9  &kp F12
-                          &kp F11  &kp F6  &kp F5  &kp F4  &none      &none     &kp F4   &kp F5  &kp F6  &kp F11
-            &tog_off FUN  &kp F10  &kp F3  &kp F2  &kp F1  &none      &none     &kp F1   &kp F2  &kp F3  &kp F10 &tog_off FUN
-                                           &trans   &trans  &trans      &none     &none    &none
+              &kp F12  &kp F9  &kp F8  &kp F7  &none   /**/  &none  &kp F7  &kp F8  &kp F9  &kp F12
+              &kp F11  &kp F6  &kp F5  &kp F4  &none   /**/  &none  &kp F4  &kp F5  &kp F6  &kp F11
+&tog_off FUN  &kp F10  &kp F3  &kp F2  &kp F1  &none   /**/  &none  &kp F1  &kp F2  &kp F3  &kp F10  &tog_off FUN
+                               &trans  &trans  &trans  /**/  &none  &none   &none
             >;
         };
 
         device {
             bindings = <
-        &none       &none    &none                 &none                &none       &bt BT_CLR    &none         &none         &none         &none
-        &none  &kp C_MUTE    &kp C_VOLUME_UP       &kp C_VOLUME_DOWN    &none       &none         &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &none
-&trans  &none       &none    &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC &none       &none         &bt BT_SEL 3  &bt BT_SEL 4 &none        &none         &trans
-                             &kp C_PREV            &kp C_PLAY_PAUSE     &kp C_NEXT  &none         &none         &none
+              &none  &none       &none                 &none                 &none       /**/  &bt BT_CLR  &none         &none         &none         &none
+              &none  &kp C_MUTE  &kp C_VOLUME_UP       &kp C_VOLUME_DOWN     &none       /**/  &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none
+&trans        &none  &none       &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &none       /**/  &none       &bt BT_SEL 3  &bt BT_SEL 4  &none         &none  &trans
+                                 &kp C_PREV            &kp C_PLAY_PAUSE      &kp C_NEXT  /**/  &none       &none         &none
             >;
         };
 
         switch_layer {
             label = "SWITCH";
             bindings = <
-           &none  &none       &none        &none    &none    &none    &none  &none       &none        &none
-           &kp ESCAPE  &none  &kp LS(TAB)  &kp TAB  &none    &none    &kp TAB  &kp LS(TAB)  &none  &kp ESCAPE
-&none      &kp ESCAPE  &none  &kp LS(TAB)  &kp TAB  &none    &none    &kp TAB  &kp LS(TAB)  &none  &kp ESCAPE  &none
-                         &none  &none       &none    &none    &none    &none
+              &none       &none  &none        &none    &none  /**/  &none  &none    &none        &none  &none
+              &kp ESCAPE  &none  &kp LS(TAB)  &kp TAB  &none  /**/  &none  &kp TAB  &kp LS(TAB)  &none  &kp ESCAPE
+&none         &kp ESCAPE  &none  &kp LS(TAB)  &kp TAB  &none  /**/  &none  &kp TAB  &kp LS(TAB)  &none  &kp ESCAPE  &none
+                                 &none        &none    &none  /**/  &none  &none    &none
             >;
         };
 

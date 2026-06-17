@@ -1,0 +1,4 @@
+interface:
+  display_name: "Totem Keymap Formatting"
+  short_description: "Format Totem ZMK keymap layers"
+  default_prompt: "Use $totem-keymap-formatting to align the Totem keymap layer bindings."

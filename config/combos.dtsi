@@ -43,7 +43,7 @@
             layers = <BASE>;
         };
 
-        // NON-THUMB SYMBOLS 
+        // NON-THUMB SYMBOLS
         combo_backslash {
             timeout-ms = <30>;
             key-positions = <21 24>;
@@ -88,7 +88,7 @@
             bindings = <&kp RPAR>;
             layers = <0>;
         };
-        
+
         combo_lbrc {
             timeout-ms = <30>;
             key-positions = <27 29>;
@@ -183,22 +183,6 @@
             timeout-ms = <50>;
             key-positions = <36 17>;
             bindings = <&skq RALT>;
-            slow-release;
-        };
-
-        combo_lfun {
-            timeout-ms = <50>;
-            key-positions = <34 03>;
-            bindings = <&mo FUN>;
-            layers = <BASE>;
-            slow-release;
-        };
-
-        combo_rfun {
-            timeout-ms = <50>;
-            key-positions = <35 06>;
-            bindings = <&mo FUN>;
-            layers = <BASE>;
             slow-release;
         };
 
@@ -444,10 +428,10 @@
             layers = <0>;
             slow-release;
         };
-        
+
         // THUMB SYMBOLS
         // LEFT
-        
+
         combo_grave {
             timeout-ms = <30>;
             key-positions = <33 1>;
@@ -460,7 +444,7 @@
             bindings = <&kp TILDE>;
             layers = <0>;
         };
-        
+
         combo_percent {
             timeout-ms = <25>;
             key-positions = <33 21>;
