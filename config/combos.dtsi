@@ -36,13 +36,6 @@
             layers = <BASE_2>;
         };
 
-        combo_r_base_2 {
-            timeout-ms = <50>;
-            key-positions = <22 23>;
-            bindings = <&kp R>;
-            layers = <BASE_2>;
-        };
-
         combo_lcaps_word {
             timeout-ms = <50>;
             key-positions = <10 14>;
