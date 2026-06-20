@@ -11,6 +11,14 @@
             ignore-modifiers;
         };
 
+        num_shift: num_layer_sticky_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&skq>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
+
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
