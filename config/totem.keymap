@@ -53,7 +53,7 @@
               &kp B  &kp M  &kp F      &kp P          &kp EXCL                   /**/  &kp QUESTION                &kp U     &kp O      &kp Y      &kp J
               &kp N  &kp L  &kp S      &kp T          &kp G                      /**/  &kp EQUAL                   &kp E     &kp A      &kp I      &kp H
 &mo DEVICE    &kp X  &kp W  &kp C      &kp D          &kp V                      /**/  &kp SEMI                    &kp FSLH  &kp DOT    &kp COMMA  &kp K  &device_base_switch DEVICE BASE
-                            &kp HYPER  &lt NAV SPACE  &num_shift NUM LEFT_SHIFT  /**/  &num_shift NUM RIGHT_SHIFT  &kp R  &kp HYPER
+                            &kp HYPER  &lt NAV SPACE  &num_shift NUM LEFT_SHIFT  /**/  &num_shift NUM RIGHT_SHIFT  &kp R     &kp HYPER
             >;
         };
 
