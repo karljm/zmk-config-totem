@@ -18,13 +18,14 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 #include <dt-bindings/zmk/mouse.h>
 
-#define BASE   0
-#define NAV    1
-#define NUM    2
-#define FUN    3
-#define DEVICE 4
-#define SWITCH 5
-#define SYM_PAIR 6
+#define BASE     0
+#define BASE_2   1
+#define NAV      2
+#define NUM      3
+#define FUN      4
+#define DEVICE   5
+#define SWITCH   6
+#define SYM_PAIR 7
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -41,8 +42,18 @@
             bindings = <
               &kp B  &kp L  &kp D      &kp W          &kp EXCL                   /**/  &kp QUESTION                &kp F          &kp O      &kp U      &kp J
               &kp N  &kp R  &kp T      &kp S          &kp G                      /**/  &kp Y                       &kp H          &kp A      &kp E      &kp I
-&mo DEVICE    &kp Q  &kp X  &kp M      &kp C          &kp V                      /**/  &kp K                       &kp P          &kp DOT    &kp COMMA  &kp FSLH  &lt DEVICE SEMI
+&mo DEVICE    &kp Q  &kp X  &kp M      &kp C          &kp V                      /**/  &kp K                       &kp P          &kp DOT    &kp COMMA  &kp FSLH  &device_base_switch DEVICE BASE_2
                             &kp HYPER  &lt NAV SPACE  &num_shift NUM LEFT_SHIFT  /**/  &num_shift NUM RIGHT_SHIFT  &lt NAV SPACE  &kp HYPER
+            >;
+        };
+
+        base_2 {
+            label = "BASE 2";
+            bindings = <
+              &kp B  &kp M  &kp F      &kp P          &kp EXCL                   /**/  &kp QUESTION                &kp U  &kp O      &kp Y      &kp J
+              &kp N  &kp L  &kp S      &kp T          &kp G                      /**/  &none                       &kp E  &kp A      &kp I      &kp H
+&mo DEVICE    &kp X  &kp W  &kp C      &kp D          &kp V                      /**/  &none                       &none  &kp DOT    &kp COMMA  &kp K  &device_base_switch DEVICE BASE
+                            &kp HYPER  &lt NAV SPACE  &num_shift NUM LEFT_SHIFT  /**/  &num_shift NUM RIGHT_SHIFT  &kp R  &kp HYPER
             >;
         };
 

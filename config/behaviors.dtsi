@@ -19,6 +19,14 @@
             tapping-term-ms = <200>;
         };
 
+        device_base_switch: device_layer_base_switch {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&to>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
+
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
