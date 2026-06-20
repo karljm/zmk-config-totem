@@ -106,60 +106,60 @@
 
         // MODIFIERS
         combo_lgui {
-            timeout-ms = <50>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
             key-positions = <33 11>;
             bindings = <&skq LGUI>;
             slow-release;
         };
 
         combo_lsft {
-            timeout-ms = <50>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
             key-positions = <33 13>;
             bindings = <&skq LEFT_SHIFT>;
             slow-release;
         };
 
         combo_lctl {
-            timeout-ms = <50>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
             key-positions = <33 10>;
             bindings = <&skq LCTRL>;
             slow-release;
         };
 
         combo_lalt {
-            timeout-ms = <50>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
             key-positions = <33 12>;
             bindings = <&skq LALT>;
             slow-release;
         };
 
         combo_rgui {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <50>;
             key-positions = <36 18>;
             bindings = <&skq RGUI>;
             slow-release;
         };
 
         combo_rsft {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <50>;
             key-positions = <36 16>;
             bindings = <&skq RIGHT_SHIFT>;
             slow-release;
         };
 
         combo_rctl {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <50>;
             key-positions = <36 19>;
             bindings = <&skq RCTRL>;
             slow-release;
         };
 
         combo_ralt {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <50>;
             key-positions = <36 17>;
             bindings = <&skq RALT>;
             slow-release;
