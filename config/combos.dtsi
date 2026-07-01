@@ -65,6 +65,7 @@
 
         combo_sqt {
             timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
             key-positions = <17 18>;
             bindings = <&kp SQT>;
             layers = <0>;
@@ -72,6 +73,7 @@
 
         combo_dqt {
             timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
             key-positions = <7 8>;
             bindings = <&kp DQT>;
             layers = <0>;
@@ -397,7 +399,7 @@
         combo_mac_edit {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            key-positions = <01 02>;
+            key-positions = <22 23>;
             bindings = <&mo EDIT_MAC>;
             layers = <0>;
             slow-release;
@@ -406,7 +408,7 @@
         combo_mac_del {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            key-positions = <01 12>;
+            key-positions = <01 02>;
             bindings = <&mo DEL_MAC>;
             layers = <0>;
             slow-release;
@@ -415,7 +417,7 @@
         combo_win_edit {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            key-positions = <22 23>;
+            key-positions = <22 24>;
             bindings = <&mo EDIT_WIN>;
             layers = <0>;
             slow-release;
@@ -424,7 +426,7 @@
         combo_win_del {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            key-positions = <22 12>;
+            key-positions = <01 03>;
             bindings = <&mo DEL_WIN>;
             layers = <0>;
             slow-release;
