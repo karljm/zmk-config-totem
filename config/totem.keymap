@@ -25,6 +25,10 @@
 #define DEVICE 4
 #define SWITCH 5
 #define SYM_PAIR 6
+#define EDIT_MAC 7
+#define EDIT_WIN 8
+#define DEL_MAC 9
+#define DEL_WIN 10
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -100,6 +104,46 @@
               &kp RBRC  &kp RPAR  &kp LBRC  &kp LPAR  &none   /**/  &none   &kp LPAR  &kp LBRC  &kp RPAR  &kp RBRC
 &none         &none     &none     &kp RBKT  &kp LBKT  &none   /**/  &none   &kp LBKT  &kp RBKT  &none     &none     &none
                                   &trans    &trans    &trans  /**/  &trans  &trans    &trans
+            >;
+        };
+
+        edit_mac {
+            label = "EDIT_MAC";
+            bindings = <
+              &trans  &trans  &mac_line_start  &mac_line_end   &trans            /**/  &trans            &mac_line_end    &mac_line_start  &trans  &trans
+              &trans  &trans  &mac_word_prev   &mac_word_next  &trans            /**/  &trans            &mac_word_next   &mac_word_prev   &trans  &trans
+&trans        &trans  &trans  &trans           &trans          &trans            /**/  &trans            &trans           &trans           &trans  &trans  &trans
+                              &trans           &kp LEFT_SHIFT  &mac_select_line  /**/  &mac_select_line  &kp RIGHT_SHIFT  &trans
+            >;
+        };
+
+        edit_win {
+            label = "EDIT_WIN";
+            bindings = <
+              &trans  &trans  &win_line_start  &win_line_end   &trans            /**/  &trans            &win_line_end    &win_line_start  &trans  &trans
+              &trans  &trans  &win_word_prev   &win_word_next  &trans            /**/  &trans            &win_word_next   &win_word_prev   &trans  &trans
+&trans        &trans  &trans  &trans           &trans          &trans            /**/  &trans            &trans           &trans           &trans  &trans  &trans
+                              &trans           &kp LEFT_SHIFT  &win_select_line  /**/  &win_select_line  &kp RIGHT_SHIFT  &trans
+            >;
+        };
+
+        del_mac {
+            label = "DEL_MAC";
+            bindings = <
+              &trans  &trans  &mac_delete_line_right  &mac_delete_line_left  &trans  /**/  &trans  &mac_delete_line_left  &mac_delete_line_right  &trans  &trans
+              &trans  &trans  &mac_delete_word_right  &mac_delete_word_left  &trans  /**/  &trans  &mac_delete_word_left  &mac_delete_word_right  &trans  &trans
+&trans        &trans  &trans  &trans                  &trans                 &trans  /**/  &trans  &trans                 &trans                  &trans  &trans  &trans
+                              &trans                  &trans                 &trans  /**/  &trans  &trans                 &trans
+            >;
+        };
+
+        del_win {
+            label = "DEL_WIN";
+            bindings = <
+              &trans  &trans  &win_delete_line_right  &win_delete_line_left  &trans  /**/  &trans  &win_delete_line_left  &win_delete_line_right  &trans  &trans
+              &trans  &trans  &win_delete_word_right  &win_delete_word_left  &trans  /**/  &trans  &win_delete_word_left  &win_delete_word_right  &trans  &trans
+&trans        &trans  &trans  &trans                  &trans                 &trans  /**/  &trans  &trans                 &trans                  &trans  &trans  &trans
+                              &trans                  &trans                 &trans  /**/  &trans  &trans                 &trans
             >;
         };
     };

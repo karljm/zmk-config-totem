@@ -394,31 +394,51 @@
         };
 
         // SWITCHING
-        combo_gui_prev {
+        combo_mac_edit {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            key-positions = <11 23>;
-            bindings = <&sw_gui_prev>;
+            key-positions = <01 02>;
+            bindings = <&mo EDIT_MAC>;
             layers = <0>;
             slow-release;
         };
+
+        combo_mac_del {
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
+            key-positions = <01 12>;
+            bindings = <&mo DEL_MAC>;
+            layers = <0>;
+            slow-release;
+        };
+
+        combo_win_edit {
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
+            key-positions = <22 23>;
+            bindings = <&mo EDIT_WIN>;
+            layers = <0>;
+            slow-release;
+        };
+
+        combo_win_del {
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
+            key-positions = <22 12>;
+            bindings = <&mo DEL_WIN>;
+            layers = <0>;
+            slow-release;
+        };
+
         combo_gui_next {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            key-positions = <11 24>;
+            key-positions = <11 23>;
             bindings = <&sw_gui_next>;
             layers = <0>;
             slow-release;
         };
 
-        combo_ctl_prev {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <11 12>;
-            bindings = <&sw_ctl_prev>;
-            layers = <0>;
-            slow-release;
-        };
         combo_ctl_next {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
@@ -428,18 +448,10 @@
             slow-release;
         };
 
-        combo_alt_prev {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <11 2>;
-            bindings = <&sw_alt_prev>;
-            layers = <0>;
-            slow-release;
-        };
         combo_alt_next {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            key-positions = <11 3>;
+            key-positions = <11 24>;
             bindings = <&sw_alt_next>;
             layers = <0>;
             slow-release;

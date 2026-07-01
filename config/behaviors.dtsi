@@ -130,6 +130,184 @@
                 ;
         };
 
+        mac_line_start: mac_line_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LG(LEFT)>;
+        };
+
+        mac_line_end: mac_line_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LG(RIGHT)>;
+        };
+
+        mac_word_prev: mac_word_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LA(LEFT)>;
+        };
+
+        mac_word_next: mac_word_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LA(RIGHT)>;
+        };
+
+        mac_select_line: mac_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp LG(LEFT)>
+                , <&macro_tap &kp LS(LG(RIGHT))>
+                ;
+        };
+
+        mac_select_word: mac_select_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp LA(LEFT)>
+                , <&macro_tap &kp LS(LA(RIGHT))>
+                ;
+        };
+
+        mac_delete_word_left: mac_delete_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LA(BACKSPACE)>;
+        };
+
+        mac_delete_word_right: mac_delete_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LA(DELETE)>;
+        };
+
+        mac_delete_line_left: mac_delete_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LG(BACKSPACE)>;
+        };
+
+        mac_delete_line_right: mac_delete_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LG(DELETE)>;
+        };
+
+        win_line_start: win_line_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp HOME>;
+        };
+
+        win_line_end: win_line_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp END>;
+        };
+
+        win_word_prev: win_word_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LC(LEFT)>;
+        };
+
+        win_word_next: win_word_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LC(RIGHT)>;
+        };
+
+        win_select_line: win_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp HOME>
+                , <&macro_tap &kp LS(END)>
+                ;
+        };
+
+        win_select_word: win_select_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp LC(LEFT)>
+                , <&macro_tap &kp LS(LC(RIGHT))>
+                ;
+        };
+
+        win_delete_word_left: win_delete_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LC(BACKSPACE)>;
+        };
+
+        win_delete_word_right: win_delete_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LC(DELETE)>;
+        };
+
+        win_delete_line_left: win_delete_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp LS(HOME)>
+                , <&macro_tap &kp BACKSPACE>
+                ;
+        };
+
+        win_delete_line_right: win_delete_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp LS(END)>
+                , <&macro_tap &kp DELETE>
+                ;
+        };
+
         pair_lpar: pair_lpar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
