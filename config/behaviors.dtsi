@@ -15,8 +15,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&mo>, <&skq>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
         };
 
         tog_on: toggle_layer_on_only {
