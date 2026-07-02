@@ -414,54 +414,45 @@
             slow-release;
         };
 
-        combo_gui_next {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <11 23>;
-            bindings = <&sw_gui_next>;
-            layers = <0>;
-            slow-release;
-        };
-
         combo_ctl_next {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
             key-positions = <11 13>;
             bindings = <&sw_ctl_next>;
             layers = <0>;
             slow-release;
         };
+        
+        combo_ctl_prev {
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
+            key-positions = <11 12>;
+            bindings = <&sw_ctl_prev>;
+            layers = <0>;
+            slow-release;
+        };
+
+        combo_gui_next {
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
+            key-positions = <11 24>;
+            bindings = <&sw_gui_next>;
+            layers = <0>;
+            slow-release;
+        };
 
         combo_alt_next {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <11 24>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
+            key-positions = <11 23>;
             bindings = <&sw_alt_next>;
-            layers = <0>;
-            slow-release;
-        };
-
-        combo_alt_next_right {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <18 6>;
-            bindings = <&sw_alt_next>;
-            layers = <0>;
-            slow-release;
-        };
-
-        combo_alt_prev_right {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <18 7>;
-            bindings = <&sw_alt_prev>;
             layers = <0>;
             slow-release;
         };
 
         combo_ctl_next_right {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
             key-positions = <18 16>;
             bindings = <&sw_ctl_next>;
             layers = <0>;
@@ -469,8 +460,8 @@
         };
 
         combo_ctl_prev_right {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
             key-positions = <18 17>;
             bindings = <&sw_ctl_prev>;
             layers = <0>;
@@ -478,19 +469,19 @@
         };
 
         combo_gui_next_right {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
             key-positions = <18 27>;
             bindings = <&sw_gui_next>;
             layers = <0>;
             slow-release;
         };
 
-        combo_gui_prev_right {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
+        combo_alt_next_right {
+            timeout-ms = <20>;
+            require-prior-idle-ms = <200>;
             key-positions = <18 28>;
-            bindings = <&sw_gui_prev>;
+            bindings = <&sw_alt_next>;
             layers = <0>;
             slow-release;
         };
