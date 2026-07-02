@@ -27,8 +27,6 @@
 #define SYM_PAIR 6
 #define EDIT_MAC 7
 #define EDIT_WIN 8
-#define DEL_MAC 9
-#define DEL_WIN 10
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -127,25 +125,6 @@
             >;
         };
 
-        del_mac {
-            label = "DEL_MAC";
-            bindings = <
-              &trans  &trans  &mac_delete_word_fwd  &mac_delete_word_bck  &trans  /**/  &trans  &mac_delete_word_bck  &mac_delete_word_fwd  &trans  &trans
-              &trans  &trans  &mac_delete_line_fwd  &mac_delete_line_bck  &trans  /**/  &trans  &mac_delete_line_bck  &mac_delete_line_fwd  &trans  &trans
-&trans        &trans  &trans  &trans                &trans                &trans  /**/  &trans  &trans                &trans                &trans  &trans  &trans
-                              &trans                &trans                &trans  /**/  &trans  &trans                &trans
-            >;
-        };
-
-        del_win {
-            label = "DEL_WIN";
-            bindings = <
-              &trans  &trans  &win_delete_word_fwd  &win_delete_word_bck  &trans  /**/  &trans  &win_delete_word_bck  &win_delete_word_fwd  &trans  &trans
-              &trans  &trans  &win_delete_line_fwd  &win_delete_line_bck  &trans  /**/  &trans  &win_delete_line_bck  &win_delete_line_fwd  &trans  &trans
-&trans        &trans  &trans  &trans                &trans                &trans  /**/  &trans  &trans                &trans                &trans  &trans  &trans
-                              &trans                &trans                &trans  /**/  &trans  &trans                &trans
-            >;
-        };
     };
 
     /*

@@ -405,29 +405,11 @@
             slow-release;
         };
 
-        combo_mac_del {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <01 02>;
-            bindings = <&mo DEL_MAC>;
-            layers = <0>;
-            slow-release;
-        };
-
         combo_win_edit {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
             key-positions = <22 24>;
             bindings = <&mo EDIT_WIN>;
-            layers = <0>;
-            slow-release;
-        };
-
-        combo_win_del {
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <01 03>;
-            bindings = <&mo DEL_WIN>;
             layers = <0>;
             slow-release;
         };
