@@ -21,8 +21,8 @@
 
         sym_shift: sym_layer_sticky_shift {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            bindings = <&sym_hold_cleanup>, <&sticky_shift>;
+            #binding-cells = <2>;
+            bindings = <&sym_hold_cleanup>, <&skq>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
         };
@@ -56,19 +56,13 @@
 
         sym_hold_cleanup: sym_hold_cleanup {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             bindings
                 = <&macro_press &mo SYM>
                 , <&macro_pause_for_release>
                 , <&macro_tap &tog_off SYM2>
                 , <&macro_release &mo SYM>
                 ;
-        };
-
-        sticky_shift: sticky_shift {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &skq LEFT_SHIFT>;
         };
 
         sw_gui_next: switch_gui_next {
