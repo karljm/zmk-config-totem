@@ -16,5 +16,5 @@ Base layer labels for orientation:
                 B   L   D   W   Z       ?   F   O   U   J
                 N   R   T   S   G       Y   H   A   E   I
             --  Q   X   M   C   V       K   P   .   ,   /   ;
-                            NUM NAV SFT     SFT NAV NUM
+                            NUM NAV SYM     SYM NAV NUM
 ```
