@@ -30,10 +30,10 @@
             tapping-term-ms = <150>;
         };
 
-        num_hold: num_layer_hold_cleanup {
+        num_layer_sticky: num_layer_sticky {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            bindings = <&num_hold_cleanup &sl NUM>;
+            #binding-cells = <2>;
+            bindings = <&num_hold_cleanup>, <&sl>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
         };
