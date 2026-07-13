@@ -30,10 +30,10 @@
             tapping-term-ms = <150>;
         };
 
-        num_hyper: num_layer_sticky_hyper {
+        num_hold: num_layer_hold_cleanup {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&num_hold_cleanup>, <&skq>;
+            #binding-cells = <0>;
+            bindings = <&num_hold_cleanup>, <&sl NUM>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
         };
@@ -89,21 +89,6 @@
                 ;
         };
 
-        sw_gui_prev: switch_gui_prev {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SWITCH &kp LGUI>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LSHIFT>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SWITCH &kp LGUI>
-                ;
-        };
-
         sw_ctl_next: switch_ctl_next {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -140,21 +125,6 @@
             bindings
                 = <&macro_press &mo SWITCH &kp LALT>
                 , <&macro_tap &kp TAB>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SWITCH &kp LALT>
-                ;
-        };
-
-        sw_alt_prev: switch_alt_prev {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SWITCH &kp LALT>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LSHIFT>
                 , <&macro_pause_for_release>
                 , <&macro_release &mo SWITCH &kp LALT>
                 ;
@@ -203,17 +173,6 @@
                 ;
         };
 
-        mac_select_word: mac_select_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_tap &kp LA(LEFT)>
-                , <&macro_tap &kp LS(LA(RIGHT))>
-                ;
-        };
-
         win_line_start: win_line_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -254,95 +213,6 @@
             bindings
                 = <&macro_tap &kp HOME>
                 , <&macro_tap &kp LS(END)>
-                ;
-        };
-
-        win_select_word: win_select_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_tap &kp LC(LEFT)>
-                , <&macro_tap &kp LS(LC(RIGHT))>
-                ;
-        };
-
-        pair_lpar: pair_lpar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SYM2>
-                , <&macro_tap &kp LPAR>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SYM2>
-                ;
-        };
-
-        pair_lbrc: pair_lbrc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SYM2>
-                , <&macro_tap &kp LBRC>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SYM2>
-                ;
-        };
-
-        pair_rpar: pair_rpar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SYM2>
-                , <&macro_tap &kp RPAR>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SYM2>
-                ;
-        };
-
-        pair_rbrc: pair_rbrc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SYM2>
-                , <&macro_tap &kp RBRC>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SYM2>
-                ;
-        };
-
-        pair_lbkt: pair_lbkt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SYM2>
-                , <&macro_tap &kp LBKT>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SYM2>
-                ;
-        };
-
-        pair_rbkt: pair_rbkt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press &mo SYM2>
-                , <&macro_tap &kp RBKT>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo SYM2>
                 ;
         };
 
