@@ -45,7 +45,7 @@
               &kp B  &kp L  &kp D                    &kp W          &kp EXCL                   /**/  &kp QUESTION               &kp F          &kp O                    &kp U      &kp J
               &kp N  &kp R  &kp T                    &kp S          &kp G                      /**/  &kp Y                      &kp H          &kp A                    &kp E      &kp I
 &mo DEVICE    &kp Q  &kp X  &kp M                    &kp C          &kp V                      /**/  &kp K                      &kp P          &kp DOT                  &kp COMMA  &kp FSLH  &lt DEVICE SEMI
-                            &layer_sticky NUM HYPER  &lt NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE  &layer_sticky NUM HYPER
+                              &num_hyper NUM HYPER   &lt NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE    &num_hyper NUM HYPER
             >;
         };
 

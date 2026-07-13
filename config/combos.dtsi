@@ -108,19 +108,19 @@
             slow-release;
         };
 
-        combo_lgui_lsft {
+        combo_lhyper {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
             key-positions = <33 21>;
-            bindings = <&skq SGUI>;
+            bindings = <&skq HYPER>;
             slow-release;
         };
 
-        combo_lctl_lsft {
+        combo_lgui_lsft {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
             key-positions = <33 22>;
-            bindings = <&skq SCTL>;
+            bindings = <&skq SGUI>;
             slow-release;
         };
 
@@ -132,19 +132,19 @@
             slow-release;
         };
 
-        combo_lhyper {
+        combo_lctl_lsft {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
             key-positions = <33 24>;
-            bindings = <&skq HYPER>;
+            bindings = <&skq SCTL>;
             slow-release;
         };
 
-        combo_rgui_rsft {
+        combo_rctl_rsft {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
             key-positions = <36 27>;
-            bindings = <&skq SGUI>;
+            bindings = <&skq SCTL>;
             slow-release;
         };
 
@@ -156,11 +156,11 @@
             slow-release;
         };
 
-        combo_rctl_rsft {
+        combo_rgui_rsft {
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
             key-positions = <36 29>;
-            bindings = <&skq SCTL>;
+            bindings = <&skq SGUI>;
             slow-release;
         };
 
@@ -348,7 +348,7 @@
             layers = <0>;
             slow-release;
         };
-        
+
         combo_ctl_prev {
             timeout-ms = <20>;
             require-prior-idle-ms = <200>;
