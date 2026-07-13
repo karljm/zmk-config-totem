@@ -22,6 +22,20 @@ include:
   - board: seeeduino_xiao_ble
     shield: totem_left
     snippet: studio-rpc-usb-uart
+    cmake-args: '-DCONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_silent\"'
+    artifact-name: totem_silent_left
   - board: seeeduino_xiao_ble
     shield: totem_right
+    cmake-args: '-DCONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_silent\"'
+    artifact-name: totem_silent_right
+  - board: seeeduino_xiao_ble
+    shield: totem_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: '-DCONFIG_ZMK_KEYBOARD_NAME=\"TOTEM\"'
+    artifact-name: totem_regular_left
+  - board: seeeduino_xiao_ble
+    shield: totem_right
+    cmake-args: '-DCONFIG_ZMK_KEYBOARD_NAME=\"TOTEM\"'
+    artifact-name: totem_regular_right
+
 # there is no settingsreset (needed) for the XIAO
