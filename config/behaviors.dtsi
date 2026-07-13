@@ -1,4 +1,7 @@
 #define HYPER LC(LA(LS(LGUI)))
+#define SGUI LS(LGUI)
+#define SCTL LS(LCTRL)
+#define SALT LS(LALT)
 
 / {
     behaviors {
@@ -334,5 +337,6 @@
                 , <&macro_release &mo SYM2>
                 ;
         };
+
     };
 };
