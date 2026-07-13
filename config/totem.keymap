@@ -92,7 +92,7 @@
               &kp ESC  &none  &kp LS(TAB)  &kp TAB  &none  /**/  &none  &kp TAB  &kp LS(TAB)  &none  &kp ESC
               &kp ESC  &none  &kp LS(TAB)  &kp TAB  &none  /**/  &none  &kp TAB  &kp LS(TAB)  &none  &kp ESC
 &none         &kp ESC  &none  &kp LS(TAB)  &kp TAB  &none  /**/  &none  &kp TAB  &kp LS(TAB)  &none  &kp ESC  &none
-                              &none        &kp ESC  &none  /**/  &none  &kp ESC  &none
+                              &kp Q        &kp ESC  &kp W  /**/  &kp W  &kp ESC  &kp Q
             >;
         };
 
