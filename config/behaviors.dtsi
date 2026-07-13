@@ -33,7 +33,7 @@
         num_hold: num_layer_hold_cleanup {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
-            bindings = <&num_hold_cleanup>, <&sl NUM>;
+            bindings = <&num_hold_cleanup &sl NUM>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
         };
