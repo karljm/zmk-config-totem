@@ -326,6 +326,15 @@
             slow-release;
         };
 
+        combo_vim {
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
+            key-positions = <35 19>;
+            bindings = <&mo VIM>;
+            layers = <BASE>;
+            slow-release;
+        };
+
         combo_ctl_next {
             timeout-ms = <20>;
             require-prior-idle-ms = <200>;

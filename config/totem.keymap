@@ -30,6 +30,7 @@
 #define EDIT_MAC 9
 #define EDIT_WIN 10
 #define TMUX     11
+#define VIM      12
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -56,7 +57,7 @@
             bindings = <
               &none        &none        &none        &caps_word    &none   /**/  &none   &caps_word    &none        &none        &none
               &tog_on NAV  &none        &tog_on SYM  &tog_on SYM2  &none   /**/  &none   &tog_on SYM2  &tog_on SYM  &none        &tog_on NAV
-&none         &none        &tog_on FUN  &tog_on NUM  &tog_on TMUX  &none   /**/  &none   &tog_on TMUX  &tog_on NUM  &tog_on FUN  &none         &none
+&none         &tog_on VIM  &tog_on FUN  &tog_on NUM  &tog_on TMUX  &none   /**/  &none   &tog_on TMUX  &tog_on NUM  &tog_on FUN  &tog_on VIM  &none
                                         &trans       &trans        &trans  /**/  &trans  &trans        &trans
             >;
         };
@@ -155,6 +156,16 @@
               &tmux_sync_panes  &tmux_zoom         &tmux_window_prev   &tmux_window_next   &none             /**/  &tmux_choose_window   &none   &none   &none  &none
 &none         &tmux_copy_mode   &tmux_pane_left    &tmux_pane_up       &tmux_pane_down     &tmux_pane_right  /**/  &none                 &none   &none   &none  &none  &none
                                                    &trans              &trans              &trans            /**/  &trans                &trans  &trans
+            >;
+        };
+
+        vim {
+            label = "VIM";
+            bindings = <
+              &kp W      &kp P     &kp DQT   &kp SQT   &kp GRAVE  /**/  &none    &none    &none    &none    &none
+              &kp LPAR   &kp LBKT  &kp LBRC  &kp LT    &kp T      /**/  &vim_yi  &vim_ci  &vim_di  &vim_vi  &none
+&none         &kp LS(W)  &kp S     &kp RPAR  &kp RBKT  &kp RBRC   /**/  &vim_ya  &vim_ca  &vim_da  &vim_va  &none  &none
+                                   &trans    &trans    &trans     /**/  &trans   &trans   &trans
             >;
         };
 
