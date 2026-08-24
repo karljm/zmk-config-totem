@@ -29,20 +29,6 @@
             layers = <BASE>;
         };
 
-        combo_lcaps_word {
-            timeout-ms = <50>;
-            key-positions = <10 14>;
-            bindings = <&caps_word>;
-            layers = <BASE>;
-        };
-
-        combo_rcaps_word {
-            timeout-ms = <50>;
-            key-positions = <15 19>;
-            bindings = <&caps_word>;
-            layers = <BASE>;
-        };
-
         // MODIFIERS
         combo_lgui {
             timeout-ms = <25>;
