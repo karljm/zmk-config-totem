@@ -151,10 +151,10 @@
         tmux {
             label = "TMUX";
             bindings = <
-              &none            &tmux_split_vert  &tmux_split_horiz  &tmux_session_prev  &tmux_session_next  /**/  &tmux_choose_session  &none   &none   &none  &none
-              &none            &tmux_sync_panes  &tmux_zoom         &tmux_window_prev   &tmux_window_next   /**/  &tmux_choose_window   &none   &none   &none  &none
-&none         &tmux_copy_mode  &tmux_pane_left   &tmux_pane_up      &tmux_pane_down     &tmux_pane_right    /**/  &none                 &none   &none   &none  &none  &none
-                                                 &trans             &trans              &trans              /**/  &trans                &trans  &trans
+              &tmux_split_vert  &tmux_split_horiz  &tmux_session_prev  &tmux_session_next  &none             /**/  &tmux_choose_session  &none   &none   &none  &none
+              &tmux_sync_panes  &tmux_zoom         &tmux_window_prev   &tmux_window_next   &none             /**/  &tmux_choose_window   &none   &none   &none  &none
+&none         &tmux_copy_mode   &tmux_pane_left    &tmux_pane_up       &tmux_pane_down     &tmux_pane_right  /**/  &none                 &none   &none   &none  &none  &none
+                                                   &trans              &trans              &trans            /**/  &trans                &trans  &trans
             >;
         };
 
