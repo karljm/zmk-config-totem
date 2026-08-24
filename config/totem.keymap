@@ -54,9 +54,9 @@
         layer_select {
             label = "LSEL";
             bindings = <
-              &none  &none         &none        &caps_word    &none   /**/  &none   &caps_word    &none        &none         &none
-              &none  &select_sym2  &tog_on SYM  &tog_on NAV   &none   /**/  &none   &tog_on NAV   &tog_on SYM  &select_sym2  &none
-&none         &none  &select_fun   &tog_on NUM  &tog_on TMUX  &none   /**/  &none   &tog_on TMUX  &tog_on NUM  &select_fun   &none  &none
+              &none  &none         &none        &caps_word    &none   /**/  &none   &caps_word    &none        &none        &none
+              &select_sym2  &none  &tog_on SYM  &tog_on NAV   &none   /**/  &none   &tog_on NAV   &tog_on SYM  &none        &select_sym2
+&none         &none  &select_fun   &tog_on NUM  &tog_on TMUX  &none   /**/  &none   &tog_on TMUX  &tog_on NUM  &select_fun  &none  &none
                                    &trans       &trans        &trans  /**/  &trans  &trans        &trans
             >;
         };
@@ -121,9 +121,9 @@
         sym2 {
             label = "SYM2";
             bindings = <
-              &none     &none   &none     &none     &none     /**/  &none   &none   &kp LBKT  &kp RBKT  &none
-              &kp LBRC  &trans  &kp LPAR  &kp RPAR  &kp RBRC  /**/  &none   &none   &kp LBRC  &kp RBRC  &none
-&none         &none     &none   &kp LBKT  &kp RBKT  &none     /**/  &none   &none   &kp LPAR  &kp RPAR  &none  &none
+              &none   &none     &none     &none     &none     /**/  &none   &none   &kp LBKT  &kp RBKT  &none
+              &trans  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  /**/  &none   &none   &kp LBRC  &kp RBRC  &none
+&none         &none   &none     &kp LBKT  &kp RBKT  &none     /**/  &none   &none   &kp LPAR  &kp RPAR  &none  &none
                                 &trans    &trans    &trans    /**/  &trans  &trans  &trans
             >;
         };
