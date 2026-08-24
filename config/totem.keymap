@@ -162,10 +162,10 @@
         vim {
             label = "VIM";
             bindings = <
-              &kp W      &kp P     &kp DQT   &kp SQT   &kp GRAVE  /**/  &none    &none    &none    &none    &none
-              &kp LPAR   &kp LBKT  &kp LBRC  &kp LT    &kp T      /**/  &vim_yi  &vim_ci  &vim_di  &vim_vi  &none
-&none         &kp LS(W)  &kp S     &kp RPAR  &kp RBKT  &kp RBRC   /**/  &vim_ya  &vim_ca  &vim_da  &vim_va  &none  &none
-                                   &trans    &trans    &trans     /**/  &trans   &trans   &trans
+              &none     &kp P     &none     &none     &none      /**/  &vim_prev_diag  &vim_prev_change  &vim_next_change  &vim_next_diag  &none
+              &kp LPAR  &kp LBRC  &kp LPAR  &kp LBKT  &kp LT     /**/  &none           &none             &none             &none           &none
+&none         &none     &kp S     &kp DQT   &kp SQT   &kp GRAVE  /**/  &none           &none             &none             &none           &none  &none
+                                  &trans    &kp W     &kp LS(W)  /**/  &trans          &trans            &trans
             >;
         };
 

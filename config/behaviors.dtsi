@@ -171,6 +171,38 @@
             bindings = <&macro_tap &kp V &kp A>;
         };
 
+        vim_prev_diag: vim_prev_diag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LBKT &kp D>;
+        };
+
+        vim_prev_change: vim_prev_change {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LBKT &kp C>;
+        };
+
+        vim_next_change: vim_next_change {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp RBKT &kp C>;
+        };
+
+        vim_next_diag: vim_next_diag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp RBKT &kp D>;
+        };
+
         tmux_split_vert: tmux_split_vert {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;

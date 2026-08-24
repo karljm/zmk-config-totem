@@ -326,12 +326,67 @@
             slow-release;
         };
 
-        combo_vim {
+        combo_vim_yi {
             timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <35 19>;
-            bindings = <&mo VIM>;
-            layers = <BASE>;
+            key-positions = <35 15>;
+            bindings = <&vim_yi>;
+            layers = <VIM>;
+            slow-release;
+        };
+
+        combo_vim_ci {
+            timeout-ms = <25>;
+            key-positions = <35 16>;
+            bindings = <&vim_ci>;
+            layers = <VIM>;
+            slow-release;
+        };
+
+        combo_vim_di {
+            timeout-ms = <25>;
+            key-positions = <35 17>;
+            bindings = <&vim_di>;
+            layers = <VIM>;
+            slow-release;
+        };
+
+        combo_vim_vi {
+            timeout-ms = <25>;
+            key-positions = <35 18>;
+            bindings = <&vim_vi>;
+            layers = <VIM>;
+            slow-release;
+        };
+
+        combo_vim_ya {
+            timeout-ms = <25>;
+            key-positions = <35 26>;
+            bindings = <&vim_ya>;
+            layers = <VIM>;
+            slow-release;
+        };
+
+        combo_vim_ca {
+            timeout-ms = <25>;
+            key-positions = <35 27>;
+            bindings = <&vim_ca>;
+            layers = <VIM>;
+            slow-release;
+        };
+
+        combo_vim_da {
+            timeout-ms = <25>;
+            key-positions = <35 28>;
+            bindings = <&vim_da>;
+            layers = <VIM>;
+            slow-release;
+        };
+
+        combo_vim_va {
+            timeout-ms = <25>;
+            key-positions = <35 29>;
+            bindings = <&vim_va>;
+            layers = <VIM>;
             slow-release;
         };
 
