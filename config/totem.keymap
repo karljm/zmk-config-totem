@@ -18,16 +18,18 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 #include <dt-bindings/zmk/mouse.h>
 
-#define BASE   0
-#define NAV    1
-#define NUM    2
-#define FUN    3
-#define DEVICE 4
-#define SWITCH 5
-#define SYM    6
-#define SYM2   7
-#define EDIT_MAC 8
-#define EDIT_WIN 9
+#define BASE     0
+#define LSEL     1
+#define NAV      2
+#define NUM      3
+#define FUN      4
+#define DEVICE   5
+#define SWITCH   6
+#define SYM      7
+#define SYM2     8
+#define EDIT_MAC 9
+#define EDIT_WIN 10
+#define TMUX     11
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -42,10 +44,20 @@
 
         base {
             bindings = <
-              &kp B  &kp L  &kp D                    &kp W          &kp EXCL                   /**/  &kp QUESTION               &kp F          &kp O                    &kp U      &kp J
-              &kp N  &kp R  &kp T                    &kp S          &kp G                      /**/  &kp Y                      &kp H          &kp A                    &kp E      &kp I
-&mo DEVICE    &kp Q  &kp X  &kp M                    &kp C          &kp V                      /**/  &kp K                      &kp P          &kp DOT                  &kp COMMA  &kp FSLH  &lt DEVICE SEMI
-                          &num_layer_sticky NUM NUM  &lt NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE  &num_layer_sticky NUM NUM
+              &kp B  &kp L  &kp D                    &kp W          &kp EXCL                       /**/  &kp QUESTION                   &kp F          &kp O                    &kp U      &kp J
+              &kp N  &kp R  &kp T                    &kp S          &kp G                          /**/  &kp Y                          &kp H          &kp A                    &kp E      &kp I
+&mo DEVICE    &kp Q  &kp X  &kp M                    &kp C          &kp V                          /**/  &kp K                          &kp P          &kp DOT                  &kp COMMA  &kp FSLH  &lt DEVICE SEMI
+                          &num_layer_sticky NUM NUM  &lt NAV SPACE  &select_shift LSEL LEFT_SHIFT  /**/  &select_shift LSEL LEFT_SHIFT  &lt NAV SPACE  &num_layer_sticky NUM NUM
+            >;
+        };
+
+        layer_select {
+            label = "LSEL";
+            bindings = <
+              &none  &none         &none        &none         &none   /**/  &none   &none         &none        &none         &none
+              &none  &select_sym2  &tog_on SYM  &tog_on NAV   &none   /**/  &none   &tog_on NAV   &tog_on SYM  &select_sym2  &none
+&none         &none  &select_fun   &tog_on NUM  &tog_on TMUX  &none   /**/  &none   &tog_on TMUX  &tog_on NUM  &select_fun   &none  &none
+                                   &trans       &trans        &trans  /**/  &trans  &trans        &trans
             >;
         };
 
@@ -60,9 +72,9 @@
 
         num {
             bindings = <
-              &none      &kp KP_N9  &kp KP_N8  &kp KP_N7   &none      /**/  &none      &kp KP_N7   &kp KP_N8  &kp KP_N9  &none
-              &none      &kp KP_N6  &kp KP_N5  &kp KP_N4   &none      /**/  &none      &kp KP_N4   &kp KP_N5  &kp KP_N6  &none
-&tog_on FUN   &kp KP_N0  &kp KP_N3  &kp KP_N2  &kp KP_N1   &none      /**/  &none      &kp KP_N1   &kp KP_N2  &kp KP_N3  &kp KP_N0  &tog_on FUN
+              &none      &kp KP_N9  &kp KP_N8  &kp KP_N7   &none      /**/  &none      &kp LPAR    &kp RPAR   &none      &none
+              &none      &kp KP_N6  &kp KP_N5  &kp KP_N4   &none      /**/  &none      &kp EQUAL   &kp KP_N0  &kp DOT    &kp PRCNT
+&tog_on FUN   &kp KP_N0  &kp KP_N3  &kp KP_N2  &kp KP_N1   &none      /**/  &none      &kp PLUS    &kp MINUS  &kp ASTRK  &kp FSLH   &tog_on FUN
                                     &trans     &kp KP_DOT  &kp KP_N0  /**/  &kp KP_N0  &kp KP_DOT  &none
             >;
         };
@@ -133,6 +145,16 @@
               &trans  &trans  &win_line_start  &win_line_end    &trans            /**/  &trans            &win_line_end    &win_line_start  &trans  &trans
 &trans        &trans  &trans  &win_word_left   &win_word_right  &trans            /**/  &trans            &win_word_right  &win_word_left   &trans  &trans  &trans
                               &trans           &kp LEFT_SHIFT   &win_select_line  /**/  &win_select_line  &kp RIGHT_SHIFT  &trans
+            >;
+        };
+
+        tmux {
+            label = "TMUX";
+            bindings = <
+              &tmux_split_vert  &tmux_split_horiz  &tmux_session_prev  &tmux_session_next  &none             /**/  &tmux_choose_session  &none   &none   &none  &none
+              &tmux_sync_panes  &tmux_zoom         &tmux_window_prev   &tmux_window_next   &none             /**/  &tmux_choose_window   &none   &none   &none  &none
+&none         &tmux_copy_mode   &tmux_pane_left    &tmux_pane_up       &tmux_pane_down     &tmux_pane_right  /**/  &none                 &none   &none   &none  &none  &none
+                                                   &trans              &trans              &trans            /**/  &trans                &trans  &trans
             >;
         };
 
