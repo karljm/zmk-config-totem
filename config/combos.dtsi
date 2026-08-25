@@ -330,7 +330,7 @@
             timeout-ms = <25>;
             key-positions = <35 15>;
             bindings = <&vim_yi>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
@@ -338,7 +338,7 @@
             timeout-ms = <25>;
             key-positions = <35 16>;
             bindings = <&vim_ci>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
@@ -346,7 +346,7 @@
             timeout-ms = <25>;
             key-positions = <35 17>;
             bindings = <&vim_di>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
@@ -354,7 +354,7 @@
             timeout-ms = <25>;
             key-positions = <35 18>;
             bindings = <&vim_vi>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
@@ -362,7 +362,7 @@
             timeout-ms = <25>;
             key-positions = <35 26>;
             bindings = <&vim_ya>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
@@ -370,7 +370,7 @@
             timeout-ms = <25>;
             key-positions = <35 27>;
             bindings = <&vim_ca>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
@@ -378,7 +378,7 @@
             timeout-ms = <25>;
             key-positions = <35 28>;
             bindings = <&vim_da>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
@@ -386,7 +386,7 @@
             timeout-ms = <25>;
             key-positions = <35 29>;
             bindings = <&vim_va>;
-            layers = <VIM>;
+            layers = <0>;
             slow-release;
         };
 
