@@ -73,10 +73,10 @@
 
         num {
             bindings = <
-              &none      &kp KP_N9  &kp KP_N8  &kp KP_N7   &none      /**/  &none      &kp LPAR    &kp RPAR   &none      &none
-              &none      &kp KP_N6  &kp KP_N5  &kp KP_N4   &none      /**/  &none      &kp EQUAL   &kp KP_N0  &kp DOT    &kp PRCNT
-&tog_on FUN   &kp KP_N0  &kp KP_N3  &kp KP_N2  &kp KP_N1   &none      /**/  &none      &kp PLUS    &kp MINUS  &kp ASTRK  &kp FSLH   &tog_on FUN
-                                    &trans     &kp KP_DOT  &kp KP_N0  /**/  &kp KP_N0  &kp KP_DOT  &none
+              &none      &kp KP_N9  &kp KP_N8  &kp KP_N7   &none      /**/  &none      &kp BACKSPACE  &kp LPAR   &kp RPAR   &none
+              &none      &kp KP_N6  &kp KP_N5  &kp KP_N4   &none      /**/  &none      &kp EQUAL      &kp KP_N0  &kp DOT    &kp PRCNT
+&tog_on FUN   &kp KP_N0  &kp KP_N3  &kp KP_N2  &kp KP_N1   &none      /**/  &none      &kp PLUS       &kp MINUS  &kp ASTRK  &kp FSLH   &tog_on FUN
+                                    &trans     &kp KP_DOT  &kp KP_N0  /**/  &kp KP_N0  &kp KP_DOT     &none
             >;
         };
 
@@ -112,20 +112,20 @@
         sym {
             label = "SYM";
             bindings = <
-              &none      &kp CARET  &kp DLLR   &kp GRAVE  &none      /**/  &none     &kp AMPS   &kp PIPE   &none     &none
-              &kp BSLH   &kp ASTRK  &kp MINUS  &kp PLUS   &kp PRCNT  /**/  &kp HASH  &kp SQT    &kp DQT    &kp SEMI  &none
-&none         &kp COLON  &kp TILDE  &kp LT     &kp GT     &none      /**/  &kp AT    &kp EQUAL  &kp UNDER  &none     &none  &none
-                                    &trans     &trans     &trans     /**/  &trans    &trans     &trans
+              &none      &kp CARET  &kp DLLR   &kp GRAVE  &none      /**/  &none     &kp BACKSPACE  &kp AMPS   &kp PIPE  &none
+              &kp BSLH   &kp ASTRK  &kp MINUS  &kp PLUS   &kp PRCNT  /**/  &kp HASH  &kp SQT        &kp DQT    &kp SEMI  &none
+&none         &kp COLON  &kp TILDE  &kp LT     &kp GT     &none      /**/  &kp AT    &kp EQUAL      &kp UNDER  &none     &none  &none
+                                    &trans     &trans     &trans     /**/  &trans    &trans         &trans
             >;
         };
 
         sym2 {
             label = "SYM2";
             bindings = <
-              &none   &none     &none     &none     &none     /**/  &none   &none   &kp LBKT  &kp RBKT  &none
-              &trans  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  /**/  &none   &none   &kp LBRC  &kp RBRC  &none
-&none         &none   &none     &kp LBKT  &kp RBKT  &none     /**/  &none   &none   &kp LPAR  &kp RPAR  &none  &none
-                                &trans    &trans    &trans    /**/  &trans  &trans  &trans
+              &none   &none     &none     &none     &none     /**/  &none   &kp BACKSPACE  &kp LBKT  &kp RBKT  &none
+              &trans  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  /**/  &none   &none          &kp LBRC  &kp RBRC  &none
+&none         &none   &none     &kp LBKT  &kp RBKT  &none     /**/  &none   &none          &kp LPAR  &kp RPAR  &none  &none
+                                &trans    &trans    &trans    /**/  &trans  &trans         &trans
             >;
         };
 
