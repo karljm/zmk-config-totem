@@ -308,20 +308,34 @@
         };
 
         // SWITCHING
-        combo_mac_edit {
+        combo_tmux {
             timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <22 23>;
-            bindings = <&mo EDIT_MAC>;
+            key-positions = <35 30>;
+            bindings = <&mo TMUX>;
             layers = <0>;
             slow-release;
         };
 
-        combo_win_edit {
+        combo_vim {
             timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            key-positions = <22 24>;
-            bindings = <&mo EDIT_WIN>;
+            key-positions = <35 19>;
+            bindings = <&mo VIM>;
+            layers = <0>;
+            slow-release;
+        };
+
+        combo_tmux_left {
+            timeout-ms = <25>;
+            key-positions = <34 21>;
+            bindings = <&mo TMUX>;
+            layers = <0>;
+            slow-release;
+        };
+
+        combo_vim_left {
+            timeout-ms = <25>;
+            key-positions = <34 10>;
+            bindings = <&mo VIM>;
             layers = <0>;
             slow-release;
         };

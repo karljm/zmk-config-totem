@@ -27,10 +27,8 @@
 #define SWITCH   6
 #define SYM      7
 #define SYM2     8
-#define EDIT_MAC 9
-#define EDIT_WIN 10
-#define TMUX     11
-#define VIM      12
+#define TMUX     9
+#define VIM      10
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -55,10 +53,10 @@
         layer_select {
             label = "LSEL";
             bindings = <
-              &none        &none        &none        &caps_word    &none   /**/  &none   &caps_word    &none        &none        &none
-              &tog_on NAV  &none        &tog_on SYM  &tog_on SYM2  &none   /**/  &none   &tog_on SYM2  &tog_on SYM  &none        &tog_on NAV
-&none         &tog_on VIM  &tog_on FUN  &tog_on NUM  &tog_on TMUX  &none   /**/  &none   &tog_on TMUX  &tog_on NUM  &tog_on FUN  &tog_on VIM  &none
-                                        &trans       &trans        &trans  /**/  &trans  &trans        &trans
+              &none         &none        &none        &caps_word    &none   /**/  &none   &caps_word    &none        &none        &none
+              &tog_on NAV   &none        &tog_on SYM  &tog_on SYM2  &none   /**/  &none   &tog_on SYM2  &tog_on SYM  &none        &tog_on NAV
+&none         &tog_on TMUX  &tog_on FUN  &tog_on NUM  &tog_on VIM   &none   /**/  &none   &tog_on VIM   &tog_on NUM  &tog_on FUN  &tog_on TMUX  &none
+                                         &trans       &trans        &trans  /**/  &trans  &trans        &trans
             >;
         };
 
@@ -129,41 +127,21 @@
             >;
         };
 
-        edit_mac {
-            label = "EDIT_MAC";
-            bindings = <
-              &trans  &trans  &trans           &trans           &trans            /**/  &trans            &trans           &trans           &trans  &trans
-              &trans  &trans  &mac_line_start  &mac_line_end    &trans            /**/  &trans            &mac_line_end    &mac_line_start  &trans  &trans
-&trans        &trans  &trans  &mac_word_left   &mac_word_right  &trans            /**/  &trans            &mac_word_right  &mac_word_left   &trans  &trans  &trans
-                              &trans           &kp LEFT_SHIFT   &mac_select_line  /**/  &mac_select_line  &kp RIGHT_SHIFT  &trans
-            >;
-        };
-
-        edit_win {
-            label = "EDIT_WIN";
-            bindings = <
-              &trans  &trans  &trans           &trans           &trans            /**/  &trans            &trans           &trans           &trans  &trans
-              &trans  &trans  &win_line_start  &win_line_end    &trans            /**/  &trans            &win_line_end    &win_line_start  &trans  &trans
-&trans        &trans  &trans  &win_word_left   &win_word_right  &trans            /**/  &trans            &win_word_right  &win_word_left   &trans  &trans  &trans
-                              &trans           &kp LEFT_SHIFT   &win_select_line  /**/  &win_select_line  &kp RIGHT_SHIFT  &trans
-            >;
-        };
-
         tmux {
             label = "TMUX";
             bindings = <
-              &tmux_split_vert  &tmux_split_horiz  &tmux_session_prev  &tmux_session_next  &none             /**/  &tmux_choose_session  &none   &none   &none  &none
-              &tmux_sync_panes  &tmux_zoom         &tmux_window_prev   &tmux_window_next   &none             /**/  &tmux_choose_window   &none   &none   &none  &none
-&none         &tmux_copy_mode   &tmux_pane_left    &tmux_pane_up       &tmux_pane_down     &tmux_pane_right  /**/  &none                 &none   &none   &none  &none  &none
-                                                   &trans              &trans              &trans            /**/  &trans                &trans  &trans
+              &none             &none  &tmux_split_vert      &tmux_split_horiz  &none                /**/  &tmux_choose_session  &none              &none              &none               &none
+              &tmux_sync_panes  &none  &tmux_new_window      &tmux_zoom         &tmux_choose_window  /**/  &tmux_session_prev    &tmux_window_prev  &tmux_window_next  &tmux_session_next  &none
+&none         &none             &none  &tmux_command_prompt  &tmux_copy_mode    &none                /**/  &tmux_pane_left       &tmux_pane_down    &tmux_pane_up      &tmux_pane_right    &none  &none
+                                       &trans                &trans             &trans               /**/  &trans                &trans             &trans
             >;
         };
 
         vim {
             label = "VIM";
             bindings = <
-              &none     &kp P     &none     &none     &none      /**/  &vim_prev_diag  &vim_prev_change  &vim_next_change  &vim_next_diag  &none
-              &kp LPAR  &kp LBRC  &kp LPAR  &kp LBKT  &kp LT     /**/  &none           &none             &none             &none           &none
+              &none     &kp P     &none     &none     &none      /**/  &none           &none             &none             &none           &none
+              &kp LPAR  &kp LBRC  &kp LPAR  &kp LBKT  &kp LT     /**/  &vim_prev_diag  &vim_prev_change  &vim_next_change  &vim_next_diag  &none
 &none         &none     &kp S     &kp DQT   &kp SQT   &kp GRAVE  /**/  &none           &none             &none             &none           &none  &none
                                   &trans    &kp W     &kp LS(W)  /**/  &trans          &trans            &trans
             >;
