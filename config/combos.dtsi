@@ -308,6 +308,22 @@
         };
 
         // SWITCHING
+        combo_sym2_left {
+            timeout-ms = <25>;
+            key-positions = <33 34>;
+            bindings = <&sym2_hold_cleanup>;
+            layers = <BASE>;
+            slow-release;
+        };
+
+        combo_sym2_right {
+            timeout-ms = <25>;
+            key-positions = <35 36>;
+            bindings = <&sym2_hold_cleanup>;
+            layers = <BASE>;
+            slow-release;
+        };
+
         combo_tmux {
             timeout-ms = <25>;
             key-positions = <35 30>;
