@@ -20,10 +20,8 @@ Base layer labels for orientation:
 ```
 
 Hold 34 or 35 for SYM; tap either for sticky Shift.
-Hold 33+34 or 35+36 for SYM2 (press within 25 ms).
-SYM2 stays active until both combo keys are released.
 
-While holding a NUM/SYM thumb or the SYM2 combo, tap a pinky key to switch:
+While holding a NUM/SYM thumb, tap a pinky key to switch:
 
 | Row | Positions | Destination |
 | --- | --- | --- |
@@ -32,7 +30,7 @@ While holding a NUM/SYM thumb or the SYM2 combo, tap a pinky key to switch:
 | Bottom | 21 / 30 | NUM |
 
 These destinations are identical on NUM, SYM and SYM2. Release the entry
-thumb (both keys for the combo) to clear the number/symbol layers and FUN.
+thumb to clear the number/symbol layers and FUN.
 Use this flow with a held entry: switching after a sticky NUM tap leaves the
 destination active; hold and release a SYM thumb to clear it.
 

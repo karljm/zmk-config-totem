@@ -45,7 +45,7 @@
             bindings = <
                 &kp B  &kp L  &kp D                      &kp W          &kp EXCL                       /**/  &kp QUESTION                   &kp F          &kp O                      &kp U      &kp J
                 &kp N  &kp R  &kp T                      &kp S          &kp G                          /**/  &kp Y                          &kp H          &kp A                      &kp E      &kp I
-&lt DEVICE ESC  &kp Q  &kp X  &kp M                      &kp C          &kp V                          /**/  &kp K                          &kp P          &kp DOT                    &kp COMMA  &kp FSLH  &lt DEVICE SEMI
+&lt DEVICE ESC  &kp Q  &kp X  &kp M                      &kp C          &kp V                          /**/  &kp K                          &kp P          &kp DOT                    &kp COMMA  &kp FSLH  &device_caps DEVICE 0
                               &num_layer_sticky NUM NUM  &lt NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE  &num_layer_sticky NUM NUM
             >;
         };
@@ -110,10 +110,10 @@
         sym {
             label = "SYM";
             bindings = <
-              &select_sym   &kp PLUS   &kp ASTRK  &kp PRCNT  &kp BSLH   /**/  &none     &kp BACKSPACE  &kp AMPS  &kp PIPE  &select_sym
-              &select_sym2  &kp MINUS  &kp UNDER  &kp EQUAL  &kp COLON  /**/  &kp HASH  &kp SQT        &kp DQT   &kp SEMI  &select_sym2
-&none         &select_num   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   /**/  &kp AT    &kp LBKT       &kp RBKT  &kp FSLH  &select_num  &none
-                                       &trans     &trans     &trans     /**/  &trans    &trans         &trans
+              &select_sym   &kp PLUS   &kp ASTRK  &kp PRCNT  &kp BSLH   /**/  &caps_word  &kp BACKSPACE  &kp AMPS  &kp PIPE  &select_sym
+              &select_sym2  &kp MINUS  &kp UNDER  &kp EQUAL  &kp COLON  /**/  &kp HASH    &kp SQT        &kp DQT   &kp SEMI  &select_sym2
+&none         &select_num   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   /**/  &kp AT      &kp LBKT       &kp RBKT  &kp FSLH  &select_num  &prog_caps
+                                       &trans     &trans     &trans     /**/  &trans      &trans         &trans
             >;
         };
 
@@ -140,10 +140,10 @@
         vim {
             label = "VIM";
             bindings = <
-              &none     &kp P     &none     &none     &none      /**/  &none           &none             &none             &none           &none
-              &kp LPAR  &kp LBRC  &kp LPAR  &kp LBKT  &kp LT     /**/  &vim_prev_diag  &vim_prev_change  &vim_next_change  &vim_next_diag  &none
-&none         &none     &kp S     &kp DQT   &kp SQT   &kp GRAVE  /**/  &none           &none             &none             &none           &none  &none
-                                  &trans    &kp W     &kp LS(W)  /**/  &trans          &trans            &trans
+              &none  &none  &kp LBKT  &none    &none      /**/  &none           &none             &none             &none           &none
+              &none  &kp S  &kp LPAR  &kp DQT  &kp LT     /**/  &vim_prev_diag  &vim_prev_change  &vim_next_change  &vim_next_diag  &none
+&none         &none  &none  &kp LBRC  &kp SQT  &kp GRAVE  /**/  &none           &none             &none             &none           &none  &none
+                            &kp P     &kp W    &kp LS(W)  /**/  &trans          &trans            &trans
             >;
         };
 
