@@ -15,20 +15,22 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/reset.h>
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 26
 #include <dt-bindings/zmk/mouse.h>
 
 #define BASE     0
-#define LSEL     1
-#define NAV      2
-#define NUM      3
-#define FUN      4
-#define DEVICE   5
-#define SWITCH   6
-#define SYM      7
-#define SYM2     8
-#define TMUX     9
-#define VIM      10
+#define GAMING   1
+#define GAMING2  2
+#define LSEL     3
+#define NAV      4
+#define NUM      5
+#define FUN      6
+#define SWITCH   7
+#define SYM      8
+#define SYM2     9
+#define TMUX     10
+#define VIM      11
+#define DEVICE   12
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -43,10 +45,30 @@
 
         base {
             bindings = <
-                &kp B  &kp L  &kp D                      &kp W          &kp EXCL                       /**/  &kp QUESTION                   &kp F          &kp O                      &kp U      &kp J
-                &kp N  &kp R  &kp T                      &kp S          &kp G                          /**/  &kp Y                          &kp H          &kp A                      &kp E      &kp I
-&lt DEVICE ESC  &kp Q  &kp X  &kp M                      &kp C          &kp V                          /**/  &kp K                          &kp P          &kp DOT                    &kp COMMA  &kp FSLH  &device_caps DEVICE 0
+                &kp B  &kp L  &kp D                      &kp W          &kp EXCL                   /**/  &kp QUESTION               &kp F          &kp O                      &kp U      &kp J
+                &kp N  &kp R  &kp T                      &kp S          &kp G                      /**/  &kp Y                      &kp H          &kp A                      &kp E      &kp I
+&lt DEVICE ESC  &kp Q  &kp X  &kp M                      &kp C          &kp V                      /**/  &kp K                      &kp P          &kp DOT                    &kp COMMA  &kp FSLH  &device_caps DEVICE 0
                               &num_layer_sticky NUM NUM  &lt NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE  &num_layer_sticky NUM NUM
+            >;
+        };
+
+        gaming {
+            label = "GAMING";
+            bindings = <
+                &kp TAB    &kp Q  &kp W  &kp E      &kp R          /**/  &kp T                      &kp Y          &kp U                      &kp I      &kp O
+                &kp LSHFT  &kp A  &kp S  &kp D      &kp F          /**/  &kp G                      &kp H          &kp J                      &kp K      &kp L
+&lt DEVICE ESC  &kp LCTRL  &kp Z  &kp X  &kp V      &lt GAMING2 B  /**/  &none              &kp N          &kp M                      &kp COMMA  &kp DOT  &device_caps DEVICE 0
+                                  &kp C  &kp SPACE  &kp LALT       /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE  &num_layer_sticky NUM NUM
+            >;
+        };
+
+        gaming2 {
+            label = "GAMING2";
+            bindings = <
+              &none  &none  &none   &none   &none   /**/  &none   &none   &none   &none  &none
+              &none  &none  &none   &none   &none   /**/  &none   &none   &none   &none  &none
+&none         &none  &none  &none   &none   &none   /**/  &none   &none   &none   &none  &none  &none
+                            &trans  &trans  &trans  /**/  &trans  &trans  &trans
             >;
         };
 
@@ -88,15 +110,6 @@
             >;
         };
 
-        device {
-            bindings = <
-              &none  &none       &none                 &none                 &none       /**/  &bt BT_CLR  &none         &none         &none         &none
-              &none  &kp C_MUTE  &kp C_VOLUME_UP       &kp C_VOLUME_DOWN     &none       /**/  &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none
-&trans        &none  &none       &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &none       /**/  &none       &bt BT_SEL 3  &bt BT_SEL 4  &none         &none  &trans
-                                 &kp C_PREV            &kp C_PLAY_PAUSE      &kp C_NEXT  /**/  &none       &none         &none
-            >;
-        };
-
         switch_layer {
             label = "SWITCH";
             bindings = <
@@ -112,7 +125,7 @@
             bindings = <
               &select_sym   &kp PLUS   &kp ASTRK  &kp PRCNT  &kp BSLH   /**/  &caps_word  &kp BACKSPACE  &kp AMPS  &kp PIPE  &select_sym
               &select_sym2  &kp MINUS  &kp UNDER  &kp EQUAL  &kp COLON  /**/  &kp HASH    &kp SQT        &kp DQT   &kp SEMI  &select_sym2
-&none         &select_num   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   /**/  &kp AT      &kp LBKT       &kp RBKT  &kp FSLH  &select_num  &prog_caps
+&none         &select_num   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   /**/  &kp AT      &kp LBKT       &kp RBKT  &kp FSLH  &select_num   &prog_caps
                                        &trans     &trans     &trans     /**/  &trans      &trans         &trans
             >;
         };
@@ -120,9 +133,9 @@
         sym2 {
             label = "SYM2";
             bindings = <
-              &select_sym   &none      &none      &none      &none     /**/  &none   &kp BACKSPACE  &none  &none  &select_sym
-              &select_sym2  &kp CARET  &kp LT     &kp GT     &kp DLLR  /**/  &none   &none          &none  &none  &select_sym2
-&none         &select_num   &none      &kp TILDE  &kp GRAVE  &none     /**/  &none   &none          &none  &none  &select_num  &none
+              &select_sym   &none      &none      &none      &none     /**/  &none   &kp BACKSPACE  &none   &none  &select_sym
+              &select_sym2  &kp CARET  &kp LT     &kp GT     &kp DLLR  /**/  &none   &none          &none   &none  &select_sym2
+&none         &select_num   &none      &kp TILDE  &kp GRAVE  &none     /**/  &none   &none          &none   &none  &select_num   &none
                                        &trans     &trans     &trans    /**/  &trans  &trans         &trans
             >;
         };
@@ -144,6 +157,15 @@
               &none  &kp S  &kp LPAR  &kp DQT  &kp LT     /**/  &vim_prev_diag  &vim_prev_change  &vim_next_change  &vim_next_diag  &none
 &none         &none  &none  &kp LBRC  &kp SQT  &kp GRAVE  /**/  &none           &none             &none             &none           &none  &none
                             &kp P     &kp W    &kp LS(W)  /**/  &trans          &trans            &trans
+            >;
+        };
+
+        device {
+            bindings = <
+              &to BASE  &to GAMING  &none                 &none                 &none       /**/  &bt BT_CLR  &none         &none         &none         &none
+              &none     &kp C_MUTE  &kp C_VOLUME_UP       &kp C_VOLUME_DOWN     &none       /**/  &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none
+&trans        &none     &none       &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &none       /**/  &none       &bt BT_SEL 3  &bt BT_SEL 4  &none         &none  &trans
+                                    &kp C_PREV            &kp C_PLAY_PAUSE      &kp C_NEXT  /**/  &none       &none         &none
             >;
         };
 
