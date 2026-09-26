@@ -55,20 +55,20 @@
         gaming {
             label = "GAMING";
             bindings = <
-                &kp TAB    &kp Q  &kp W  &kp E      &kp R          /**/  &kp T                      &kp Y          &kp U                      &kp I      &kp O
-                &kp LSHFT  &kp A  &kp S  &kp D      &kp F          /**/  &kp G                      &kp H          &kp J                      &kp K      &kp L
-&lt DEVICE ESC  &kp LCTRL  &kp Z  &kp X  &kp V      &lt GAMING2 B  /**/  &none              &kp N          &kp M                      &kp COMMA  &kp DOT  &device_caps DEVICE 0
-                                  &kp C  &kp SPACE  &kp LALT       /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE  &num_layer_sticky NUM NUM
+                &kp TAB    &kp Q  &kp W  &kp E      &kp R          /**/  &to BASE   &kp BACKSPACE  &kp UP     &kp DEL    &kp ESC
+                &kp LSHFT  &kp A  &kp S  &kp D      &kp F          /**/  &kp ENTER  &kp LEFT       &kp DOWN   &kp RIGHT  &kp TAB
+&lt DEVICE ESC  &kp LCTRL  &kp Z  &kp X  &kp V      &lt GAMING2 B  /**/  &kp B      &kp M          &kp I      &kp J      &kp P    &kp F10
+                                  &kp C  &kp SPACE  &kp LALT       /**/  &kp LCTRL  &kp SPACE      &kp LSHFT
             >;
         };
 
         gaming2 {
             label = "GAMING2";
             bindings = <
-              &none  &none  &none   &none   &none   /**/  &none   &none   &none   &none  &none
-              &none  &none  &none   &none   &none   /**/  &none   &none   &none   &none  &none
-&none         &none  &none  &none   &none   &none   /**/  &none   &none   &none   &none  &none  &none
-                            &trans  &trans  &trans  /**/  &trans  &trans  &trans
+              &kp N1  &kp N2  &trans  &kp N3  &kp T   /**/  &trans  &trans  &trans  &trans  &trans
+              &trans  &trans  &trans  &trans  &kp G   /**/  &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &kp N4  &kp N5  &kp N6  &none   /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans  /**/  &trans  &trans  &trans
             >;
         };
 
