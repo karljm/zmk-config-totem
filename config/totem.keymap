@@ -19,19 +19,17 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define BASE     0
-#define GAMING   1
-#define GAMING2  2
-#define NAV      3
-#define SCROLL   4
-#define NUM      5
-#define FUN      6
-#define SWITCH   7
-#define SYM      8
-#define SYM2     9
-#define TMUX     10
-#define VIM      11
-#define SHORTCUT 12
-#define DEVICE   13
+#define NAV      1
+#define SCROLL   2
+#define NUM      3
+#define FUN      4
+#define SWITCH   5
+#define SYM      6
+#define SYM2     7
+#define TMUX     8
+#define VIM      9
+#define SHORTCUT 10
+#define DEVICE   11
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
@@ -51,26 +49,6 @@
                 &kp N  &kp R  &kp T         &kp S                 &kp G                      /**/  &kp Y                      &kp H                 &kp A         &kp E      &kp I
 &lt DEVICE ESC  &kp Q  &kp X  &kp M         &kp C                 &kp V                      /**/  &kp K                      &kp P                 &kp DOT       &kp COMMA  &kp FSLH  &device_caps DEVICE 0
                               &mo SHORTCUT  &nav_space NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &nav_space NAV SPACE  &mo SHORTCUT
-      >;
-    };
-
-    gaming {
-      label = "GAMING";
-      bindings = <
-                &kp TAB    &kp Q  &kp W  &kp E      &kp R          /**/  &to BASE   &kp BACKSPACE  &kp UP     &kp DEL    &kp ESC
-                &kp LSHFT  &kp A  &kp S  &kp D      &kp F          /**/  &kp ENTER  &kp LEFT       &kp DOWN   &kp RIGHT  &kp TAB
-&lt DEVICE ESC  &kp LCTRL  &kp Z  &kp X  &kp V      &lt GAMING2 B  /**/  &kp B      &kp M          &kp I      &kp J      &kp P    &kp F10
-                                  &kp C  &kp SPACE  &kp LALT       /**/  &kp LCTRL  &kp SPACE      &kp LSHFT
-      >;
-    };
-
-    gaming2 {
-      label = "GAMING2";
-      bindings = <
-        &kp N1  &kp N2  &trans  &kp N3  &kp T   /**/  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &kp G   /**/  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp N4  &kp N5  &kp N6  &none   /**/  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  /**/  &trans  &trans  &trans
       >;
     };
 
@@ -177,7 +155,7 @@
     device {
       label = "DEVICE";
       bindings = <
-        &to BASE  &to GAMING  &none                 &none                 &none       /**/  &bt BT_CLR  &none         &none         &none         &none
+        &to BASE  &none       &none                 &none                 &none       /**/  &bt BT_CLR  &none         &none         &none         &none
         &none     &kp C_MUTE  &kp C_VOLUME_UP       &kp C_VOLUME_DOWN     &none       /**/  &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none
 &trans  &none     &none       &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &none       /**/  &none       &bt BT_SEL 3  &bt BT_SEL 4  &none         &none  &trans
                               &kp C_PREV            &kp C_PLAY_PAUSE      &kp C_NEXT  /**/  &none       &none         &none
