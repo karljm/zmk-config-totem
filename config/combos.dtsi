@@ -1,5 +1,5 @@
 // Keep unrestricted combos available on every non-gaming layer.
-#define COMBO_NON_GAMING_LAYERS BASE LSEL NAV NUM FUN SWITCH SYM SYM2 TMUX VIM DEVICE
+#define COMBO_NON_GAMING_LAYERS BASE LSEL NAV NUM FUN SWITCH SYM SYM2 TMUX VIM DEVICE SHORTCUT
 
 / {
     combos {
