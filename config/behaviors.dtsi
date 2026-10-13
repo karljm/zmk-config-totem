@@ -135,94 +135,94 @@
             bindings = <&macro_tap &tog_off NUM &tog_off SYM &tog_on SYM2>;
         };
 
-        shortcut_f13: shortcut_f13 {
+        shortcut_a: shortcut_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F13)>;
+            bindings = <&macro_tap &kp MEH(A)>;
         };
 
-        shortcut_f14: shortcut_f14 {
+        shortcut_b: shortcut_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F14)>;
+            bindings = <&macro_tap &kp MEH(B)>;
         };
 
-        shortcut_f15: shortcut_f15 {
+        shortcut_c: shortcut_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F15)>;
+            bindings = <&macro_tap &kp MEH(C)>;
         };
 
-        shortcut_f16: shortcut_f16 {
+        shortcut_d: shortcut_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F16)>;
+            bindings = <&macro_tap &kp MEH(D)>;
         };
 
-        shortcut_f17: shortcut_f17 {
+        shortcut_e: shortcut_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F17)>;
+            bindings = <&macro_tap &kp MEH(E)>;
         };
 
-        shortcut_f18: shortcut_f18 {
+        shortcut_f: shortcut_f {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F18)>;
+            bindings = <&macro_tap &kp MEH(F)>;
         };
 
-        shortcut_f19: shortcut_f19 {
+        shortcut_g: shortcut_g {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F19)>;
+            bindings = <&macro_tap &kp MEH(G)>;
         };
 
-        shortcut_f20: shortcut_f20 {
+        shortcut_h: shortcut_h {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F20)>;
+            bindings = <&macro_tap &kp MEH(H)>;
         };
 
-        shortcut_f21: shortcut_f21 {
+        shortcut_i: shortcut_i {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F21)>;
+            bindings = <&macro_tap &kp MEH(I)>;
         };
 
-        shortcut_f22: shortcut_f22 {
+        shortcut_j: shortcut_j {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F22)>;
+            bindings = <&macro_tap &kp MEH(J)>;
         };
 
-        shortcut_f23: shortcut_f23 {
+        shortcut_k: shortcut_k {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F23)>;
+            bindings = <&macro_tap &kp MEH(K)>;
         };
 
-        shortcut_f24: shortcut_f24 {
+        shortcut_l: shortcut_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(F24)>;
+            bindings = <&macro_tap &kp MEH(L)>;
         };
 
-        shortcut_comma: shortcut_comma {
+        shortcut_m: shortcut_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(COMMA)>;
+            bindings = <&macro_tap &kp MEH(M)>;
         };
 
-        shortcut_dot: shortcut_dot {
+        shortcut_n: shortcut_n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(DOT)>;
+            bindings = <&macro_tap &kp MEH(N)>;
         };
 
-        shortcut_slash: shortcut_slash {
+        shortcut_o: shortcut_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp MEH(FSLH)>;
+            bindings = <&macro_tap &kp MEH(O)>;
         };
 
         vim_yi: vim_yi {
@@ -465,7 +465,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <20>;
-            bindings = <&macro_tap &kp LC(B) &kp LBKT>;
+            bindings = <&macro_tap &kp LC(B) &kp LBKT &tog_off TMUX>;
         };
 
         tmux_pane_left: tmux_pane_left {

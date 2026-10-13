@@ -17,7 +17,10 @@ ROW_COLUMNS = [
     range(3, 9),
 ]
 EXPECTED_BINDINGS = sum(len(row) for row in ROW_COLUMNS)
-MIN_COL0_WIDTH = 12
+INDENT = "  "
+COLUMN_GAP = 2
+DEFAULT_ROW_INDENT = 8
+MIN_COL0_WIDTH = DEFAULT_ROW_INDENT - COLUMN_GAP
 
 
 def split_cells(block: str) -> list[str]:
@@ -68,13 +71,66 @@ def format_rows(cells: list[str]) -> str:
                 line += "/**/  "
             if cell is None:
                 if column != 6:
-                    line += " " * (widths[column] + 2)
+                    line += " " * (widths[column] + COLUMN_GAP)
+            elif column == 0:
+                line += " " * (widths[column] - len(cell))
+                line += cell + " " * COLUMN_GAP
             else:
                 line += cell
-                line += " " * (widths[column] - len(cell) + 2)
+                line += " " * (widths[column] - len(cell) + COLUMN_GAP)
         lines.append(line.rstrip())
 
     return "\n".join(lines)
+
+
+def format_keymap_indentation(text: str) -> str:
+    """Use two-space indentation inside the root keymap node.
+
+    Binding grid rows deliberately keep their absolute column positions: rows 1
+    and 2 use normal content indentation when row 3's outer key fits before
+    them, and row 4 is padded so its half separator aligns with the other rows.
+    """
+    lines = text.splitlines(keepends=True)
+    keymap_start = next(
+        (index for index, line in enumerate(lines) if re.match(r"\s*keymap\s*\{\s*$", line.rstrip("\r\n"))),
+        None,
+    )
+    if keymap_start is None:
+        return text
+
+    depth = 0
+    in_bindings = False
+    for index in range(keymap_start, len(lines)):
+        raw = lines[index]
+        newline = "\n" if raw.endswith("\n") else ""
+        content = raw.rstrip("\r\n").lstrip()
+
+        if index == keymap_start:
+            lines[index] = f"{INDENT}{content}{newline}"
+            depth = 1
+            continue
+
+        if in_bindings:
+            if content == ">;":
+                lines[index] = f"{INDENT * (depth + 1)}{content}{newline}"
+                in_bindings = False
+            continue
+
+        if not content:
+            continue
+
+        closes = content.startswith("}")
+        line_depth = depth - 1 if closes else depth
+        lines[index] = f"{INDENT * (line_depth + 1)}{content}{newline}"
+
+        if content.startswith("bindings = <"):
+            in_bindings = True
+
+        depth += content.count("{") - content.count("}")
+        if depth == 0:
+            break
+
+    return "".join(lines)
 
 
 def format_keymap(text: str) -> str:
@@ -86,7 +142,7 @@ def format_keymap(text: str) -> str:
         formatted = format_rows(cells)
         return f"{match.group('prefix')}{formatted}{match.group('suffix')}"
 
-    return pattern.sub(replace, text)
+    return format_keymap_indentation(pattern.sub(replace, text))
 
 
 def main() -> int:

@@ -17,8 +17,10 @@ Use this skill when changing `config/totem.keymap` layer bindings or when asked 
    - Row 4: columns 3-8
 3. Insert `/**/` before column 6 on every row to mark the split between halves.
 4. Pad every physical column to the longest binding in that column, then add exactly two spaces before the next column.
-5. Align row 1 and row 2 with the same horizontal start as row 3's second key. This is done by treating column 0 as at least 12 characters wide, then adding the normal two-space gap.
-6. Keep labels and non-binding properties unchanged.
+5. Start row 1 and row 2 at the normal eight-space content indent and align row 3's second key with them when its outer key fits. Right-align that outer key in the available six-character slot. If it is longer, expand the slot and push rows 1 and 2 right so the second key remains exactly two spaces after it.
+6. Align row 4 by physical columns so its `/**/` half separator is in the same column as the other three rows.
+7. Use two-space indentation inside the root `keymap` node. Keep binding-grid rows at their absolute alignment columns rather than adding structural indentation to them.
+8. Keep labels and other non-binding content unchanged apart from indentation.
 
 ## Formatter Script
 
