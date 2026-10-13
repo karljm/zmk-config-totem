@@ -147,7 +147,7 @@
               &tmux_split_vert   &tmux_sync_panes    &tmux_command_prompt  &tmux_choose_window  &tmux_choose_session  /**/  &tmux_choose_session  &tmux_choose_window  &tmux_command_prompt  &tmux_sync_panes    &tmux_split_vert
               &tmux_split_horiz  &tmux_session_prev  &tmux_window_prev     &tmux_window_next    &tmux_session_next    /**/  &tmux_session_prev    &tmux_window_prev    &tmux_window_next     &tmux_session_next  &tmux_split_horiz
 &none         &none              &tmux_pane_left     &tmux_pane_up         &tmux_pane_down      &tmux_pane_right      /**/  &tmux_pane_left       &tmux_pane_down      &tmux_pane_up         &tmux_pane_right    &none              &none
-                                                     &tmux_new_window      &tmux_zoom           &tmux_copy_mode       /**/  &trans                &trans               &trans
+                                                     &tmux_new_window      &tmux_zoom           &tmux_copy_mode       /**/  &tmux_copy_mode       &tmux_zoom           &tmux_new_window
             >;
         };
 
