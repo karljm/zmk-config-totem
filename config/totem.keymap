@@ -30,8 +30,8 @@
 #define SYM2     9
 #define TMUX     10
 #define VIM      11
-#define DEVICE   12
-#define SHORTCUT 13
+#define SHORTCUT 12
+#define DEVICE   13
 
 #include "behaviors.dtsi"
 #include "combos.dtsi"
