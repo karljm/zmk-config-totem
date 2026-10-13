@@ -21,8 +21,8 @@
 #define BASE     0
 #define GAMING   1
 #define GAMING2  2
-#define LSEL     3
-#define NAV      4
+#define NAV      3
+#define SCROLL   4
 #define NUM      5
 #define FUN      6
 #define SWITCH   7
@@ -46,10 +46,10 @@
 
         base {
             bindings = <
-                &kp B  &kp L  &kp D         &kp W          &kp EXCL                   /**/  &kp QUESTION               &kp F          &kp O         &kp U      &kp J
-                &kp N  &kp R  &kp T         &kp S          &kp G                      /**/  &kp Y                      &kp H          &kp A         &kp E      &kp I
-&lt DEVICE ESC  &kp Q  &kp X  &kp M         &kp C          &kp V                      /**/  &kp K                      &kp P          &kp DOT       &kp COMMA  &kp FSLH  &device_caps DEVICE 0
-                              &mo SHORTCUT  &lt NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &lt NAV SPACE  &mo SHORTCUT
+                &kp B  &kp L  &kp D         &kp W                 &kp EXCL                   /**/  &kp QUESTION               &kp F                 &kp O         &kp U      &kp J
+                &kp N  &kp R  &kp T         &kp S                 &kp G                      /**/  &kp Y                      &kp H                 &kp A         &kp E      &kp I
+&lt DEVICE ESC  &kp Q  &kp X  &kp M         &kp C                 &kp V                      /**/  &kp K                      &kp P                 &kp DOT       &kp COMMA  &kp FSLH  &device_caps DEVICE 0
+                              &mo SHORTCUT  &nav_space NAV SPACE  &sym_shift SYM LEFT_SHIFT  /**/  &sym_shift SYM LEFT_SHIFT  &nav_space NAV SPACE  &mo SHORTCUT
             >;
         };
 
@@ -73,22 +73,22 @@
             >;
         };
 
-        layer_select {
-            label = "LSEL";
+        nav {
             bindings = <
-              &none         &none        &none        &caps_word    &none   /**/  &none   &caps_word    &none        &none        &none
-              &tog_on NAV   &none        &tog_on SYM  &tog_on SYM2  &none   /**/  &none   &tog_on SYM2  &tog_on SYM  &none        &tog_on NAV
-&none         &tog_on TMUX  &tog_on FUN  &tog_on NUM  &tog_on VIM   &none   /**/  &none   &tog_on VIM   &tog_on NUM  &tog_on FUN  &tog_on TMUX  &none
-                                         &trans       &trans        &trans  /**/  &trans  &trans        &trans
+              &kp ESC       &kp TAB   &kp ENTER  &kp BACKSPACE  &kp DEL         /**/  &kp DEL   &kp BACKSPACE  &kp ENTER  &kp TAB    &kp ESC
+              &kp LCTRL     &kp LGUI  &kp LALT   &kp LSHFT      &tog_on SCROLL  /**/  &none     &kp RSHFT      &kp RALT   &kp RGUI   &kp RCTRL
+&none         &tog_on TMUX  &kp LEFT  &kp UP     &kp DOWN       &kp RIGHT       /**/  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &tog_on TMUX  &none
+                                      &trans     &trans         &trans          /**/  &trans    &trans         &trans
             >;
         };
 
-        nav {
+        scroll {
+            label = "SCROLL";
             bindings = <
-              &kp ESC       &kp TAB   &kp ENTER  &kp BACKSPACE  &kp DEL         /**/  &kp DEL         &kp BACKSPACE  &kp ENTER  &kp TAB    &kp ESC
-              &kp LCTRL     &kp LGUI  &kp LALT   &kp LSHFT      &msc SCRL_DOWN  /**/  &msc SCRL_DOWN  &kp RSHFT      &kp RALT   &kp RGUI   &kp RCTRL
-&none         &msc SCRL_UP  &kp LEFT  &kp UP     &kp DOWN       &kp RIGHT       /**/  &kp LEFT        &kp DOWN       &kp UP     &kp RIGHT  &msc SCRL_UP  &none
-                                      &trans     &trans         &trans          /**/  &trans          &trans         &trans
+              &none  &kp HOME      &kp PAGE_UP     &kp PAGE_DOWN    &kp END         /**/  &kp END         &kp PAGE_DOWN    &kp PAGE_UP     &kp HOME      &none
+              &none  &msc SCRL_UP  &msc SCRL_LEFT  &msc SCRL_RIGHT  &msc SCRL_DOWN  /**/  &msc SCRL_DOWN  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP  &none
+&none         &none  &none         &none           &none            &none           /**/  &none           &none            &none           &none         &none  &none
+                                   &none           &none            &none           /**/  &none           &none            &none
             >;
         };
 
@@ -163,11 +163,11 @@
 
         shortcut {
             label = "SHORTCUT";
+            // Temporary layout to test VIM/TMUX access on the pinky column while keeping shortcuts on extended F-keys.
             bindings = <
-              // temp layout, test future layout with vim/tmux access on pinky col (like sym layer layout) - tidly constrains shortcut keys to extended fkeys
               &shortcut_slash  &shortcut_dot  &shortcut_comma  &shortcut_f24  &shortcut_f23  /**/  &shortcut_f23  &shortcut_f24  &shortcut_comma  &shortcut_dot  &shortcut_slash
               &shortcut_f22    &shortcut_f21  &shortcut_f20    &shortcut_f19  &shortcut_f18  /**/  &shortcut_f18  &shortcut_f19  &shortcut_f20    &shortcut_f21  &shortcut_f22
-&none         &shortcut_f17    &shortcut_f16  &shortcut_f15    &shortcut_f14  &shortcut_f13  /**/  &shortcut_f13  &shortcut_f14  &shortcut_f15    &shortcut_f16  &shortcut_f17  &none
+&none         &shortcut_f17    &shortcut_f16  &shortcut_f15    &shortcut_f14  &shortcut_f13  /**/  &shortcut_f13  &shortcut_f14  &shortcut_f15    &shortcut_f16  &shortcut_f17    &none
                                               &trans           &none          &none          /**/  &none          &none          &trans
             >;
         };

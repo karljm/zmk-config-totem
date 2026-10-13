@@ -1,18 +1,24 @@
 // Keep unrestricted combos available on every non-gaming layer.
-#define COMBO_NON_GAMING_LAYERS BASE LSEL NAV NUM FUN SWITCH SYM SYM2 TMUX VIM DEVICE SHORTCUT
+#define COMBO_NON_GAMING_LAYERS BASE NAV SCROLL NUM FUN SWITCH SYM SYM2 TMUX VIM DEVICE SHORTCUT
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        /*
-        combo_escape {
+        combo_escape_l {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <0 14>;
             bindings = <&kp ESC>;
             layers = <0>;
         };
-        */
+
+        combo_escape_r {
+            timeout-ms = <50>;
+            key-positions = <9 15>;
+            bindings = <&kp ESC>;
+            layers = <0>;
+        };
+
         combo_lsys_reset {
             timeout-ms = <100>;
             key-positions = <4 25>;
