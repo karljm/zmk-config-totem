@@ -75,7 +75,7 @@
     };
 
     nav {
-      label = "NAV"
+      label = "NAV";
       bindings = <
         &kp ESC       &kp TAB   &kp ENTER  &kp BACKSPACE  &kp DEL         /**/  &kp DEL   &kp BACKSPACE  &kp ENTER  &kp TAB    &kp ESC
         &kp LCTRL     &kp LGUI  &kp LALT   &kp LSHFT      &tog_on SCROLL  /**/  &none     &kp RSHFT      &kp RALT   &kp RGUI   &kp RCTRL
